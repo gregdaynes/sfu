@@ -1,10 +1,10 @@
-baseurl: /starter
+baseurl: /sfu
 permalink: pretty
 markdown: rdiscount
 prose:
   rooturl: '_posts'
-  siteurl: 'http://prose.github.io/starter/'
-  relativeLinks: 'http://prose.github.io/starter/links.jsonp'
+  siteurl: 'http://gregdaynes.github.io/sfu/'
+  relativeLinks: 'http://gregdaynes.github.io/sfu/links.jsonp'
   media: '_posts/media'
   metadata:
     _posts:
