@@ -28,14 +28,10 @@ fdghdf **ghdfg** fdg hdf _ghdfg_ h
 
 codeblock
 
-    testing
-    apples
-    oranges
-    <p>
-    <strong>
+    <strong>Bananas</strong>
     
 ---
-`<div class="section">SECTION</div>`
+<div class="section">SECTION</div>
 
 
 
