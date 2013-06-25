@@ -2,16 +2,15 @@ JEKYLL Playgound
 
 ## By Category
 
-{% for cat in site.categories %}
+    {% for cat in site.categories %}
   
-  {{cat[0]}}
+      {{cat[0]}}
+
+      {% for item in cat[1] %}
+        {{item.title}}
+      {% endfor %}
   
-  
-  {% for item in cat[1] %}
-    + {{item.title}}
-  {% endfor %}
-  
-{% endfor %}
+    {% endfor %}
 
 ---
 
