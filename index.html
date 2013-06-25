@@ -3,16 +3,34 @@ layout: default
 section: blog
 ---
 
-<div class='listing col6 pad4h margin3'>
-  {% for item in site.categories.blog limit:1000 %}
+<div class="post-content-truncate">
+  {% if post.content contains "<!-- more -->" %}
+    {{ post.content | split:"<!-- more -->" | first % }}
+  {% else %}
+    {{ post.content | strip_html | truncatewords:100 }}
+  {% endif %}
+</div>
+
+
+<div>
+  {% for item in site.posts limit:1000 %}
     {% capture date %}{{ item.date | date: '%B %Y' }}{% endcapture %}
     {% capture ndate %}{{ item.next.date | date: '%B %Y' }}{% endcapture %}
 
     {% if date != ndate %}
-      <h4 class='month'>{{item.date | date: '%B %Y'}}</h4>
+      <h4>{{item.date | date: '%B %Y'}}</h4>
     {% endif %}
-    <a class='item' href='{{site.baseurl}}{{item.url}}'>{{item.title}} <span class='date'>&#126; {{item.date | date:"%b %d"}}</span></a>
+    <ul>
+      <li><a  href='{{item.url}}'>{{item.title}} - {{item.date | date:"%b %d"}}</a></li>
+    </ul>
+    
   {% endfor %}
 </div>
 
 {% include rss-link.html %}
+
+{% for category in site.categories %}
+    <a href="/{{ category | first | slugize }}/">
+        {{ category | first }}
+    </a>
+{% endfor %}
