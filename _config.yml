@@ -16,6 +16,7 @@ port:        4000
 name: 'The Search For Us'
 baseurl:     /
 url:         http://localhost:4000
+charset: utf-8
 
 
 

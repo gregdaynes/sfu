@@ -1,29 +1,49 @@
 ---
-layout: default
+# layout: default
 section: blog
 ---
 
 
 
+{% for cat in site.categories %}
+  
+  {% for item in cat[1] %}
+    {{item.title}}
+  {% endfor %}
+          
+{% endfor %}
+
+<hr />
+
 <div class='listing col6 pad4h margin3'>
-  {% for item in site.categories.blog limit:1000 %}
-    {% capture date %}{{ item.date | date: '%B %Y' }}{% endcapture %}
-    {% capture ndate %}{{ item.next.date | date: '%B %Y' }}{% endcapture %}
+  {% for item in site.categories.temp limit:1000 %}
     
+      {% capture date %}{{ item.date | date: '%B %Y' }}{% endcapture %}
+      {% capture ndate %}{{ item.next.date | date: '%B %Y' }}{% endcapture %}
       
-    
-    {% if date != ndate %}
-      <h4>{{item.date | date: '%B %Y'}}</h4>
-    {% endif %}
-    <ul>
-      <li>
-        <a  href='{{item.url}}'>{{item.title}} - {{item.date | date:"%b %d"}}</a>
-        {% if item.content contains "<!-- more -->" %}
-          {{ item.content | split:"<!-- more -->" | first % }}
-        {% else %}
-          {{ item.content | strip_html | truncatewords:100 }}
-        {% endif %}
-      </li>
+        
+      
+      {% if date != ndate %}
+        <h4>{{item.date | date: '%B %Y'}}</h4>
+      {% endif %}
+      <ul>
+        <li>
+             
+          
+          <a  href='{{item.url}}'>{{item.title}} - {{item.date | date:"%b %d"}}</a>
+          <p>
+          <!-- readmore -->
+          <!-- split at readmore -->
+          {% if item.content contains "<!-- more -->" %}
+            {{ item.content | split:"<!-- more -->" | first % }}
+          {% else %}
+            {{ item.content | strip_html | truncatewords:30 }}
+          {% endif %}
+          <a  href='{{item.url}}'>Read More…</a>
+          <!-- readmore -->
+          </p>
+          
+        </li>
     </ul>
     
   {% endfor %}

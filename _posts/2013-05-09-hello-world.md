@@ -1,6 +1,6 @@
 ---
 published: true
-category: blog
+category: temp
 layout: blog
 splash: "http://placehold.it/1600x500"
 ---
