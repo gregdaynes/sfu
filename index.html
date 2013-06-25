@@ -1,5 +1,5 @@
 ---
-# layout: default
+layout: default
 section: blog
 ---
 
@@ -7,10 +7,13 @@ section: blog
 
 {% for cat in site.categories %}
   
+  <p>{{cat[0]}}</p>
+  <ul>
   {% for item in cat[1] %}
-    {{item.title}}
+    <li>{{item.title}}</li>
   {% endfor %}
-          
+  </ul>
+  
 {% endfor %}
 
 <hr />
