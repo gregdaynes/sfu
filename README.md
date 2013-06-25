@@ -14,48 +14,38 @@ JEKYLL Playgound
 
 ---
 
-<h2>By Date</h2>
-  {% for item in site.categories.temp limit:1000 %}
+## By Date
+    
+    {% for item in site.categories.temp limit:1000 %}
     
       {% capture date %}{{ item.date | date: '%B %Y' }}{% endcapture %}
-      {% capture ndate %}{{ item.next.date | date: '%B %Y' }}{% endcapture %}
-      
-        
+      {% capture ndate %}{{ item.next.date | date: '%B %Y' }}{% endcapture %}    
       
       {% if date != ndate %}
-        <h4>{{item.date | date: '%B %Y'}}</h4>
+        {{item.date | date: '%B %Y'}}
       {% endif %}
-      <ul>
-        <li>
-          <a  href='{{item.url}}'>{{item.title}} - {{item.date | date:"%b %d"}}</a>          
-        </li>
-    </ul>
-    
-  {% endfor %}
+      
+      {{item.url}} - {{item.title}} - {{item.date | date:"%b %d"}}        
+    {% endfor %}
 
-<hr />
+---
 
-<h2>Intro Paragraphs and Read More</h2>
-<p>
-<!-- readmore -->
-<!-- split at readmore -->
-{% for item in site.posts %}
-  {{ item.title }}
-  {% if item.content contains "<!-- more -->" %}
-    {{ item.content | split:"<!-- more -->" | first % }}
-  {% else %}
-    {{ item.content | strip_html | truncatewords:30 }}
-  {% endif %}
-  <a  href='{{item.url}}'>Read More…</a>
-  <br />---
-<!-- readmore -->
-</p>
-{% endfor %}
-<hr />
+## Intro Paragraphs and Read More
 
-<h2>List Categories</h2>
-{% for category in site.categories %}
+    {% for item in site.posts %}
+      {% if item.content contains "<!-- more -->" %}
+        {{ item.content | split:"<!-- more -->" | first % }}
+      {% else %}
+        {{ item.content | strip_html | truncatewords:30 }}
+      {% endif %}
+    {% endfor %}
+
+---
+
+## List Categories
+
+    {% for category in site.categories %}
     <a href="/{{ category | first | slugize }}/">
-        {{ category | first }}
+      {{ category | first }}
     </a>
-{% endfor %}
+    {% endfor %}
