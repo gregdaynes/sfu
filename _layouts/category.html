@@ -3,7 +3,11 @@ layout: page
 ---
 
 {% for item in site.categories[page.category] %}
- {{item.title}}
+  {% if item.type != "static" %}
+
+   {{item.title}}
+ 
+  {% endif %}
 {% endfor %}
 
 
