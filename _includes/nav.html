@@ -3,7 +3,7 @@
   <ul>
     <li><a class="{% if page.section == "home" %}active{% endif %}" href="/"><i class="icon-home"></i> everything</a></li>
     {% for category in site.categories %}
-    <li><a class="{% if page.section == "blog" %}active{% endif %}"href="{{ category | first | slugize }}/"><i class="icon-{{category | first}}"></i> {{ category | first }}</a></li>
+    <li><a class="{% if page.section == "blog" %}active{% endif %}"href="/{{ category | first | slugize }}/"><i class="icon-{{category | first}}"></i> {{ category | first }}</a></li>
     {% endfor %} 
   </ul>
 </nav>
