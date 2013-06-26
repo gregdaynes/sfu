@@ -1,24 +1,36 @@
-###############
-# dev settings
 permalink: pretty
-markdown: rdiscount
-safe: true
-lsi: false
-pygments: true
-host:        0.0.0.0
-port:        4000
-# /dev settings
-###############
+markdown:  rdiscount
+safe:      true
+lsi:       false
+pygments:  true
+host:      0.0.0.0
+port:      4000
 
 
-###############
-# site settings
-name:    'The Search For Us'
-tagline: Looking, so you don't have too
+
 baseurl: /
-url:     http://localhost:4000
 charset: utf-8
-copyright: '© 2013 The Search For Us & Gregory Daynes. All rights reserved.'
+
+version:      0.0.1
+date:         0000-00-00
+language:     en-GB
+license:      v2.0. http://www.apache.org/licenses/LICENSE-2.0
+
+name:         The Search For Us
+name_short:   SFU
+tagline:      Looking, so you don't have too
+color:        #D83434
+url:          http://localhost:4000
+email:        gregdaynes@gmail.com
+copyright:    © 2013 The Search For Us & Gregory Daynes. All rights reserved.
+google:       UA-XXXXXXXX-X
+creator:      Gregory Daynes
+publisher:    http://twitter.com/gregdaynes
+keywords:     list, of, keywords
+description:  description of site
+twitter:      gregdaynes
+twitter_card: summary
+
 
 
 ###############
@@ -67,3 +79,15 @@ prose:
           element: "text"
           label: "Permalink"
           value: ""
+
+
+
+
+### page details
+# title
+# description
+# keywords
+# graph_image
+# graph_image_type
+# graph_image_width
+# graph_image_height
