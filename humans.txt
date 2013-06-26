@@ -1,1 +1,26 @@
-Hello World
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    {{site.creator}} -- Developer -- {{site.publisher}
+
+# SITE
+
+  Version: {{site.version}}
+  Last update: {{site.date}} 
+
+# THANKS
+
+    
+
+# TECHNOLOGY
+
+    HTML5
+    CSS3
+    jQuery
+    Modernizr
+    HTML5Boilerplate
+    relogo.org
+    Jekyll
+    Github Pages
