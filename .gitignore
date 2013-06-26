@@ -1,3 +1,7 @@
 _site/*
 .DS_Store
+<<<<<<< HEAD
 .sass_cache/*
+=======
+.sass_cache/*
+>>>>>>> sass implemented
