@@ -1,0 +1,25 @@
+/*
+ * breakpoint
+ *
+ * use bubbling to create breakpoints of current selector
+ *
+ * @include breakpoint(basic) 
+ */
+
+@mixin breakpoint($point) {
+  @if $point == basic {
+    @media (max-width: $basic) { @content; }
+  }
+  @else if $point == mobile {
+    @media (min-width: $mobile) { @content; }
+  }
+  @else if $point == tablet {
+    @media (min-width: $tablet)  { @content; }
+  }
+  @else if $point == desktop {
+    @media (min-width: $desktop)  { @content; }
+  }
+  @else if $point == large {
+    @media (min-width: $large)  { @content; }
+  }
+}
