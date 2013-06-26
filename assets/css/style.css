@@ -165,10 +165,6 @@ th {
   hyphens: auto;
   word-wrap: break-word; }
 
-html, body {
-  color: orange;
-  background-color: green; }
-
 /* ==========================================================================
    Helper classes
    ========================================================================== */
