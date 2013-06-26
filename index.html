@@ -1,4 +1,8 @@
 ---
-layout: category
+layout: everything
 section: home
 ---
+
+{% for item in site.posts %}
+  {{item.title}}
+{% endfor %}
