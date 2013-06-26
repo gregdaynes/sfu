@@ -10,6 +10,7 @@ port:      4000
 # Site stuff
 permalink: /:categories/:title
 charset:   utf-8
+baseurl:   /sfu
 
 # Specific stuff
 version:      0.0.1
