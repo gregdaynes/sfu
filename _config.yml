@@ -9,11 +9,7 @@ port:      4000
 
 # Site stuff
 permalink: /:categories/:title
-baseurl:   /
 charset:   utf-8
-url:       http://localhost:4000/sfu
-
-
 
 # Specific stuff
 version:      0.0.1
