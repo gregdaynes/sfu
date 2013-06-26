@@ -9,9 +9,9 @@ port:      4000
 
 # Site stuff
 permalink: /:categories/:title
-baseurl: /
-charset: utf-8
-url:          http://localhost:4000
+baseurl:   /
+charset:   utf-8
+url:       http://localhost:4000/sfu
 
 
 
