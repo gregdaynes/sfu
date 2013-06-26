@@ -2,12 +2,11 @@
 layout: page
 ---
 
-{% capture catx %}{{page.category}}{% endcapture %}
-
-{{site.categories.catx}}
-
-{% for item in site.categories.page.cat %}
-
-test
-
+{% for item in site.categories[page.category] %}
+ {{item.title}}
 {% endfor %}
+
+
+
+
+{{content}}
