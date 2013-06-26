@@ -1,13 +1,9 @@
 ---
-
 ---
-<!DOCTYPE html>
-<html>
-<head>
-  <title>{% if page.url != "/" %}{{page.title}} | {% endif %}{{site.name}}</title>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
-  <link href="/feed.rss" rel="alternate" type="application/rss+xml" title="The Search For Us RSS Feed" />
+{% include partials/doctype.html %}
+{% include partials/license.html %}
+{% include partials/conditional.html %}
+{% include partials/head.html %}
 
 <body>
   {% include header.html %}
