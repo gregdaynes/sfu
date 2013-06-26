@@ -1,28 +1,19 @@
 ---
-title: "This is my Site Title"
+
 ---
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Site Title {% if page.url != "/index.html" %}| {{page.title}}{% endif %}</title>
+  <title>{% if page.url != "/" %}{{page.title}} | {% endif %}{{site.name}}</title>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
   <link href="/feed.rss" rel="alternate" type="application/rss+xml" title="The Search For Us RSS Feed" />
-</head>
+
 <body>
-  <div class="container">
-    <div class="col12 clearfix">
-      <div class="header col6 margin3 pad4h">
-        <div class="clearfix col12">
-          <div class="menu fr">
-            <a class="{% if page.section == "blog" %}active{% endif %}" href="/">Home</a>
-            <a class="{% if page.url == "about/" %}active{% endif %}" href="/about">About</a>
-            <a class="{% if page.url == "gear/" %}active{% endif %}" href="/gear">Gear</a>
-          </div>
-          <h1 class="title">{{page.title}}</h1>
-        </div>
-      </div>
-    </div>
-    {{content}}
-  </div>
-</body>
+  {% include header.html %}
+  
+  {% include nav.html %}
+  
+  {{content}}
+
+  {% include footer.html %}

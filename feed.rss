@@ -1,7 +1,7 @@
 ---
 origin: /
-title: Blog
-description: Occasional Blog Posts
+title: Feed
+description: The Search For Us RSS Feed
 ---
 
 <?xml version='1.0' encoding='utf-8' ?>

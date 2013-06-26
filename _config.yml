@@ -13,11 +13,12 @@ port:        4000
 
 ###############
 # site settings
-name: 'The Search For Us'
-baseurl:     /
-url:         http://localhost:4000
+name:    'The Search For Us'
+tagline: Looking, so you don't have too
+baseurl: /
+url:     http://localhost:4000
 charset: utf-8
-
+copyright: '© 2013 The Search For Us & Gregory Daynes. All rights reserved.'
 
 
 ###############
