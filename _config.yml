@@ -1,4 +1,4 @@
-permalink: pretty
+# Dev stuff
 markdown:  rdiscount
 safe:      true
 lsi:       false
@@ -7,10 +7,15 @@ host:      0.0.0.0
 port:      4000
 
 
-
+# Site stuff
+permalink: /:categories/:title
 baseurl: /
 charset: utf-8
+url:          http://localhost:4000
 
+
+
+# Specific stuff
 version:      0.0.1
 date:         0000-00-00
 language:     en-GB
@@ -20,7 +25,6 @@ name:         The Search For Us
 name_short:   SFU
 tagline:      Looking, so you don't have too
 color:        #D83434
-url:          http://localhost:4000
 email:        gregdaynes@gmail.com
 copyright:    © 2013 The Search For Us & Gregory Daynes. All rights reserved.
 google:       UA-XXXXXXXX-X
@@ -30,7 +34,6 @@ keywords:     list, of, keywords
 description:  description of site
 twitter:      gregdaynes
 twitter_card: summary
-
 
 
 ###############
