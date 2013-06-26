@@ -1,5 +1,5 @@
 ---
 title: Terms of Service
-permalink: tos
+permalink: ../tos
 layout: simple
 ---
