@@ -2,11 +2,10 @@
 layout: default
 ---
 
-{% for item in site.categories %}
- {{item.title}}
+{% for item in site.posts %}
+ {% if item.type != "static" %}
+ 
+    {{item.title}}
+  
+   {% endif %}
 {% endfor %}
-
-
-
-
-{{content}}
