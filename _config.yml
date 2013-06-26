@@ -10,7 +10,8 @@ port:      4000
 # Site stuff
 permalink: /:categories/:title
 charset:   utf-8
-baseurl:   /sfu
+baseurl:   /
+url:       http://thesearchfor.us
 
 # Specific stuff
 version:      0.0.1
@@ -37,7 +38,7 @@ twitter_card: summary
 # Prose stuff
 prose:
   rooturl: '_posts'
-  siteurl: 'http://gregdaynes.github.io/sfu/'
+  siteurl: 'http://thesearchfor.us/'
   relativeLinks: 'http://gregdaynes.github.io/sfu/links.jsonp'
   media: '_posts/media'
   metadata:
