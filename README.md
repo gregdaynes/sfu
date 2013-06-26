@@ -1,5 +1,15 @@
 JEKYLL Playgound
 
+## page specified category
+
+    {% for item in site.categories[page.category] %}
+      {% if item.type != "static" %}
+        {{item.title}}
+      {% endif %}
+    {% endfor %}
+
+---
+
 ## By Category
 
     {% for cat in site.categories %}
