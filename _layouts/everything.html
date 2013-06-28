@@ -2,11 +2,31 @@
 layout: default
 ---
 <section id="content">
+
   <ul>
     {% for item in site.posts %}
       {% if item.type != "static" %}
-        <a href="{{item.url}}">{{item.title}}</a>
+        <article>
+          <i class="{{item.category}}"></i>
+          <img src="{{item.leadImage}}">
+          
+          <header>
+            <hgroup>
+              <h1>{{item.title}}</h1>
+              <h3>{{item.company}}</h3>
+            </hgroup>
+            
+            <ul>
+              <li><a href="http://twitter.com/{{item.twitter}}">{{item.author}}</a></li>
+              <li>{{ item.date | date: "%d %B %Y" }}</li>
+            </ul>
+          </header>
+          
+          <p>{{item.excerpt}} <a href="{{item.url}}">Read More</a></p>
+        </article>
       {% endif %}
     {% endfor %}
   </ul>
 </section>
+
+

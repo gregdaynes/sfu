@@ -1,0 +1,70 @@
+// menu display
+.handler, .handler-icon {
+  display: none;
+} 
+
+ul {
+  list-style: none;
+  padding: 0;
+  
+  li {
+    display: inline;
+  }
+}
+
+
+// responsive menu
+@include breakpoint-exact(500px) {
+  html {
+    overflow-x: hidden;
+  }
+
+  $navMenuWidth: 90%;
+  $transitionSpeed: .3s;
+  
+  .wrapper {
+    left: 0;
+    position: relative;
+    -webkit-transition: left $transitionSpeed ease-in-out;
+       -moz-transition: left $transitionSpeed ease-in-out;
+  }
+  
+  #nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    z-index: 1;
+    overflow: hidden;
+    background-color: white;
+    -webkit-transition: width $transitionSpeed ease-in-out;
+       -moz-transition: width $transitionSpeed ease-in-out;
+      
+    ul {
+      li a {
+        display: block;
+      }
+    }
+  }
+  
+  .handler-icon {
+    display: inline;
+  }
+  
+  .handler {    
+    &#handler:checked {
+      & ~ #nav {
+        width: $navMenuWidth;
+        
+      }
+  
+      & ~ .wrapper {
+        
+        left: $navMenuWidth;
+          
+        
+      }
+    }
+  }
+}

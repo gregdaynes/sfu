@@ -5,10 +5,9 @@
 
 {% include partials/graph.html %}
 
-<title>{% if page.url != "/" %}{{page.title}} | {% endif %}{{site.name}}</title>
+<title>{% if page.url != "" %}{{page.title}} | {% endif %}{{site.name}}</title>
 
 <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
-<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
 {% include partials/ie.html %}
 

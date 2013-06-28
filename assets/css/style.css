@@ -1,5 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700);
 @import "http://cdnjs.cloudflare.com/ajax/libs/normalize/2.1.0/normalize.css";
+@import "http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css";
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -164,6 +164,73 @@ th {
   -ms-hyphens: auto;
   hyphens: auto;
   word-wrap: break-word; }
+
+.handler, .handler-icon {
+  display: none; }
+
+ul {
+  list-style: none;
+  padding: 0; }
+  ul li {
+    display: inline; }
+
+@media (max-width: 500px) {
+  html {
+    overflow-x: hidden; }
+
+  .wrapper {
+    left: 0;
+    position: relative;
+    -webkit-transition: left 0.3s ease-in-out;
+    -moz-transition: left 0.3s ease-in-out; }
+
+  #nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    z-index: 1;
+    overflow: hidden;
+    background-color: white;
+    -webkit-transition: width 0.3s ease-in-out;
+    -moz-transition: width 0.3s ease-in-out; }
+    #nav ul li a {
+      display: block; }
+
+  .handler-icon {
+    display: inline; }
+
+  .handler#handler:checked ~ #nav {
+    width: 90%; }
+  .handler#handler:checked ~ .wrapper {
+    left: 90%; } }
+#nav h2 {
+  display: none; }
+
+.icon-everything:before {
+  content: "\F0AC"; }
+
+.icon-carry:before {
+  content: "\f0f2"; }
+
+.icon-clothing:before {
+  content: "\f007"; }
+
+.icon-devices:before {
+  content: "\f10b"; }
+
+.icon-dining:before {
+  content: "\F0F5"; }
+
+.icon-safety:before {
+  content: "\F0FE"; }
+
+.icon-shelter:before {
+  content: "\F015"; }
+
+.icon-tools:before {
+  content: "\F0AD"; }
 
 /* ==========================================================================
    Helper classes

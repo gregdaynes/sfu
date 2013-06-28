@@ -6,18 +6,26 @@
 {% include partials/head.html %}
 
 <body>
-  {% include header.html %}
+  <input type="checkbox" name="handler" class="handler" id="handler" onclick="null" />
+  
+  <div class="wrapper">
+    <label for="handler" class="handler-icon" href="#"><i class="icon-reorder icon-rotate-90"></i></label>
+    {% include header.html %}
+  </div>
   
   {% include nav.html %}
   
-  {{content}}
-
-  {% include subscribe.html %}
+  <div class="wrapper">
+      
+    {{content}}
   
-  {% include colophon.html %}
-
-  {% include footer.html %}
+    {% include subscribe.html %}
+    
+    {% include colophon.html %}
   
-  {% include scripts.html %}
-  
-  {% include analytics.html %}
+    {% include footer.html %}
+    
+    {% include scripts.html %}
+    
+    {% include analytics.html %}
+  </div>
