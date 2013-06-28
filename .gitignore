@@ -1,5 +1,4 @@
 _site/*
 .DS_Store
+.sass_cache/*
 *.scssc
-.sass-cache
-tmp
