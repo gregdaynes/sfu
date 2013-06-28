@@ -1,5 +1,19 @@
 ---
-layout: default
 ---
+{% include partials/doctype.html %}
+{% include partials/license.html %}
+{% include partials/conditional.html %}
+{% include partials/head.html %}
 
-{{ content }}
+<body>
+  {% include header.html %}
+  
+  {% include nav.html %}
+  
+  {{content}}
+
+  {% include footer.html %}
+  
+  {% include scripts.html %}
+  
+  {% include analytics.html %}

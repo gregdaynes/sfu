@@ -1,11 +1,12 @@
 ---
 layout: default
 ---
-
-{% for item in site.posts %}
- {% if item.type != "static" %}
- 
-    {{item.title}}
-  
-   {% endif %}
-{% endfor %}
+<section id="content">
+  <ul>
+    {% for item in site.posts %}
+      {% if item.type != "static" %}
+        <a href="{{item.url}}">{{item.title}}</a>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</section>

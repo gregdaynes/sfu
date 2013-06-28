@@ -1,0 +1,43 @@
+<section id="rating">
+  <h2>Ratings</h2>
+  
+  <h3>Quality</h3>
+  {% if page.ratingQuality == "na" %}
+    Not Applicable
+  {% else %}
+    {% for i in (1..page.ratingQuality) %}<i class="icon icon-star"></i>{% endfor %}
+    {% for n in (page.ratingQuality..4) %}<i class="icon icon-star-empty"></i>{% endfor %}
+  {% endif %}
+  
+  <h3>Design</h3>
+  {% if page.ratingDesign == "na" %}
+    Not Applicable
+  {% else %}
+    {% for i in (1..page.ratingDesign) %}<i class="icon icon-star"></i>{% endfor %}
+    {% for n in (page.ratingDesign..4) %}<i class="icon icon-star-empty"></i>{% endfor %}
+  {% endif %}
+    
+  <h3>Cost</h3>
+  {% if page.ratingCost == "na" %}
+    Not Applicable
+  {% else %}
+    {% for i in (1..page.ratingCost) %}<i class="icon icon-star"></i>{% endfor %}
+    {% for n in (page.ratingCost..4) %}<i class="icon icon-star-empty"></i>{% endfor %}
+  {% endif %}
+  
+  <h3>Usefullness</h3>
+  {% if page.ratingUse == "na" %}
+    Not Applicable
+  {% else %}
+    {% for i in (1..page.ratingUse) %}<i class="icon icon-star"></i>{% endfor %}
+    {% for n in (page.ratingUse..4) %}<i class="icon icon-star-empty"></i>{% endfor %}
+  {% endif %}
+    
+  <h3>General</h3>
+  {% if page.ratingGeneral == "na" %}
+    Not Applicable
+  {% else %}
+    {% for i in (1..page.ratingGeneral) %}<i class="icon icon-star"></i>{% endfor %}
+    {% for n in (page.ratingGeneral..4) %}<i class="icon icon-star-empty"></i>{% endfor %}
+  {% endif %}
+</section>
