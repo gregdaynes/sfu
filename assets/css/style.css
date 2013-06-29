@@ -199,12 +199,73 @@ ul {
       display: block; }
 
   .handler-icon {
+    position: absolute;
     display: inline; }
 
   .handler#handler:checked ~ #nav {
     width: 90%; }
   .handler#handler:checked ~ .wrapper {
     left: 90%; } }
+body {
+  background-color: #e4e4e4; }
+
+.btn-primary {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-weight: 500;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  border-radius: 3px;
+  background-color: #aab8bf;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #aab8bf), color-stop(100%, #a2b2ba));
+  background-image: -webkit-linear-gradient(#aab8bf, #a2b2ba);
+  background-image: linear-gradient(#aab8bf, #a2b2ba);
+  border: 1px solid #5e7584;
+  box-shadow: inset 0 1px 0 #bcc8cd, inset 0 -5px 0 #8499a3;
+  line-height: 30px;
+  padding-bottom: 10px;
+  text-shadow: none;
+  padding-left: 23px;
+  padding-right: 26px; }
+  .btn-primary:hover, .btn-primary:focus {
+    color: #fff;
+    text-decoration: none; }
+  .btn-primary:active, .btn-primary.active {
+    outline: 0;
+    background-image: none;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
+  .btn-primary.disabled, .btn-primary[disabled], fieldset[disabled] .btn-primary {
+    cursor: default;
+    pointer-events: none;
+    opacity: 0.65;
+    box-shadow: none; }
+
+a {
+  color: #5c743a; }
+
+#header {
+  background-image: url("../img/header_bg.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 300px; }
+  #header .logo {
+    background-image: url("../img/header_logo.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+    text-indent: -999em; }
+    @media (max-width: 428px) {
+      #header .logo {
+        background-size: 90%; } }
+    #header .logo h1, #header .logo h2 {
+      margin: 0; }
+    #header .logo .tagline {
+      display: block; }
+
 #nav h2 {
   display: none; }
 
@@ -231,6 +292,9 @@ ul {
 
 .icon-tools:before {
   content: "\F0AD"; }
+
+html {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAAHpk4xqAAAAElBMVEX6+vrs7Ozr6+vu7u7v7+/t7e3EXgZMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAHRJREFUKM/VzrERA0EQAsGdAfJPWRG8c55wuyi4xt3CDuCW9pCDnvOYl9HEq8bkMojcwHLYwpnUXjTrKZoLLd4a7KVtG0U9ZYWFkQM0aZd5mQoKyYFqNsAbbcMo7AKbykbuX5In4pv2TT618tTi6Uaf6HvrB6gQAgdgFALaAAAAAElFTkSuQmCC); }
 
 /* ==========================================================================
    Helper classes

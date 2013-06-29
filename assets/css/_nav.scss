@@ -49,6 +49,7 @@ ul {
   }
   
   .handler-icon {
+    position: absolute;
     display: inline;
   }
   
@@ -56,9 +57,8 @@ ul {
     &#handler:checked {
       & ~ #nav {
         width: $navMenuWidth;
-        
       }
-  
+        
       & ~ .wrapper {
         
         left: $navMenuWidth;
