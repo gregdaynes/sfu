@@ -5,7 +5,8 @@
 {% include partials/conditional.html %}
 {% include partials/head.html %}
 
-<body>
+<body class="{{page.body-class}}">
+
   <input type="checkbox" name="handler" class="handler" id="handler" onclick="null" />
   
   <div class="wrapper">
@@ -16,9 +17,11 @@
   {% include nav.html %}
   
   <div class="wrapper">
-      
-    {{content}}
-  
+    
+    <main>
+      {{content}}
+    </main>
+    
     {% include subscribe.html %}
     
     {% include colophon.html %}
