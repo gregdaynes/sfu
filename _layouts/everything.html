@@ -1,5 +1,6 @@
 ---
 layout: default
+body-class: list
 ---
 <section id="content">
 
@@ -7,7 +8,7 @@ layout: default
     {% for item in site.posts %}
       {% if item.type != "static" %}
         <article>
-          <i class="{{item.category}}"></i>
+          <i class="icon-{{item.category}}"></i>
           <img src="{{item.leadImage}}">
           
           <header>
