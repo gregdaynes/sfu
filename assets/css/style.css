@@ -165,108 +165,13 @@ th {
   hyphens: auto;
   word-wrap: break-word; }
 
-.handler, .handler-icon {
-  display: none; }
-
-ul {
-  list-style: none;
-  padding: 0; }
-  ul li {
-    display: inline; }
-
-@media (max-width: 500px) {
-  html {
-    overflow-x: hidden; }
-
-  .wrapper {
-    left: 0;
-    position: relative;
-    -webkit-transition: left 0.3s ease-in-out;
-    -moz-transition: left 0.3s ease-in-out; }
-
-  #nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    z-index: 1;
-    overflow: hidden;
-    background-color: white;
-    -webkit-transition: width 0.3s ease-in-out;
-    -moz-transition: width 0.3s ease-in-out; }
-    #nav ul li a {
-      display: block; }
-
-  .handler-icon {
-    position: absolute;
-    display: inline; }
-
-  .handler#handler:checked ~ #nav {
-    width: 90%; }
-  .handler#handler:checked ~ .wrapper {
-    left: 90%; } }
-body {
-  background-color: #e4e4e4; }
-
-.btn-primary {
-  display: inline-block;
-  padding: 6px 12px;
-  margin-bottom: 0;
-  font-weight: 500;
+#header .logo h1 {
+  font-size: 28px;
+  font-size: 2.8rem;
   text-align: center;
-  vertical-align: middle;
-  cursor: pointer;
-  border: 1px solid transparent;
-  white-space: nowrap;
-  border-radius: 3px;
-  background-color: #aab8bf;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #aab8bf), color-stop(100%, #a2b2ba));
-  background-image: -webkit-linear-gradient(#aab8bf, #a2b2ba);
-  background-image: linear-gradient(#aab8bf, #a2b2ba);
-  border: 1px solid #5e7584;
-  box-shadow: inset 0 1px 0 #bcc8cd, inset 0 -5px 0 #8499a3;
-  line-height: 30px;
-  padding-bottom: 10px;
-  text-shadow: none;
-  padding-left: 23px;
-  padding-right: 26px; }
-  .btn-primary:hover, .btn-primary:focus {
-    color: #fff;
-    text-decoration: none; }
-  .btn-primary:active, .btn-primary.active {
-    outline: 0;
-    background-image: none;
-    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
-  .btn-primary.disabled, .btn-primary[disabled], fieldset[disabled] .btn-primary {
-    cursor: default;
-    pointer-events: none;
-    opacity: 0.65;
-    box-shadow: none; }
+  font-weight: 800; }
 
-a {
-  color: #5c743a; }
-
-#header {
-  background-image: url("../img/header_bg.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  height: 300px; }
-  #header .logo {
-    background-image: url("../img/header_logo.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 100%;
-    text-indent: -999em; }
-    @media (max-width: 428px) {
-      #header .logo {
-        background-size: 90%; } }
-    #header .logo h1, #header .logo h2 {
-      margin: 0; }
-    #header .logo .tagline {
-      display: block; }
-
-#nav h2 {
+.handler, .handler-icon {
   display: none; }
 
 .icon-everything:before {
@@ -293,8 +198,12 @@ a {
 .icon-tools:before {
   content: "\F0AD"; }
 
-html {
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAAHpk4xqAAAAElBMVEX6+vrs7Ozr6+vu7u7v7+/t7e3EXgZMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAHRJREFUKM/VzrERA0EQAsGdAfJPWRG8c55wuyi4xt3CDuCW9pCDnvOYl9HEq8bkMojcwHLYwpnUXjTrKZoLLd4a7KVtG0U9ZYWFkQM0aZd5mQoKyYFqNsAbbcMo7AKbykbuX5In4pv2TT618tTi6Uaf6HvrB6gQAgdgFALaAAAAAElFTkSuQmCC); }
+body {
+  background-color: #e4e4e4;
+  color: white; }
+
+a {
+  color: #5c743a; }
 
 /* ==========================================================================
    Helper classes
@@ -440,3 +349,5 @@ html {
   h2,
   h3 {
     page-break-after: avoid; } }
+
+/*# sourceMappingURL=style.css.map */

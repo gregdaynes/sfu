@@ -1,5 +1,6 @@
 // IMPORTS
-//@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,400,600,700,800);
+
 @import "http://cdnjs.cloudflare.com/ajax/libs/normalize/2.1.0/normalize.css";
 @import "http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css";
 @import "variables";
@@ -7,161 +8,25 @@
 @import "neat/neat";
 @import "mixins";
 @import "base";
+@import "header";
 @import "nav";
-
-$gray-darker:           lighten(#000, 13.5%); // #222
-$gray-dark:             lighten(#000, 20%);   // #333
-$gray:                  lighten(#000, 33.5%); // #555
-$gray-light:            lighten(#000, 60%);   // #999
-$gray-lighter:          lighten(#000, 93.5%); // #eee
-$brand-primary:         #428bca;
-$brand-success:         #5cb85c;
-$brand-warning:         #f0ad4e;
-$brand-danger:          #d9534f;
-$brand-info:            #5bc0de;
-$body-bg:               #fff;
-$text-color:            $gray-dark;
-$link-color:            $brand-primary;
-$link-hover-color:      lighten($link-color, 15%);
-$gray-darkest:                 #a1a1a1; 
-$gray-darker:                  #c2c2c2; 
-$gray-dark:                    #ddd;   
-$gray:                         #e4e4e4;
-$brand:                        #3d4e5b;
-$brand-primary:                #a3b4bc;
-$brand-primary-dark:           #8499a3;
-$brand-primary-border:         #5e7584;
-$brand-primary-highlight:      #bcc8cd;
-$brand-primary-gradient-start: #aab8bf;
-$brand-primary-gradient-end:   #a2b2ba;
-$brand-secondary:              #5c743a;
+@import "nav.responsive";
+@import "content.list";
 
 // 
 // Template
 // Created By: Gregory Daynes
 // -----------------------------------------------------------------------------
 
-
-//
-// General
-// ----------------------------------------------------
 body {
   background-color: $gray;
 }
 
-.btn-primary {
-  display: inline-block;
-  padding: 6px 12px;
-  margin-bottom: 0; // For input.btn
-  font-weight: 500;
-  text-align: center;
-  vertical-align: middle;
-  cursor: pointer;
-  border: 1px solid transparent;
-  white-space: nowrap;
-  border-radius: 3px;
-
-  &:hover,
-  &:focus {
-    color: #fff;
-    text-decoration: none;
-  }
-
-  &:active,
-  &.active {
-    outline: 0;
-    background-image: none;
-    box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
-  }
-
-  &.disabled,
-  &[disabled],
-  fieldset[disabled] & {
-    cursor: default;
-    pointer-events: none; // Future-proof disabling of clicks
-    opacity:  0.65;
-    box-shadow: none;
-  }
-  
-  @include linear-gradient($brand-primary-gradient-start,$brand-primary-gradient-end);
-  border: 1px solid $brand-primary-border;
-  box-shadow: inset 0 1px 0 $brand-primary-highlight, inset 0 -5px 0 $brand-primary-dark;
-  line-height: 30px;
-  padding-bottom: 10px;
-  text-shadow: none;
-  padding-left: 23px;
-  padding-right: 26px;
-}
-
 a {
-  color: $brand-secondary;
-}
-
-//
-// Header
-// ----------------------------------------------------
-#header {
-  background-image: url("../img/header_bg.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  height: 300px;
-    
-  .logo {
-    background-image: url("../img/header_logo.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 100%;
-    text-indent: -999em;
-    
-    @include breakpoint-exact(428px) {
-      background-size: 90%;
-    }
-    
-    h1, h2 {
-      margin: 0;
-    }
-    
-    .tagline {
-      display: block; // allows text-indent to be used
-    }
-  }
+  color: $b2;
 }
 
 
-
-// NAVIGATION
-#nav {
-  h2 {
-    display: none;
-  }
-}
-
-.icon-everything:before { content: "\F0AC"; }
-.icon-carry:before    { content: "\f0f2"; }
-.icon-clothing:before { content: "\f007"; }
-.icon-devices:before  { content: "\f10b"; }
-.icon-dining:before   { content: "\F0F5"; }
-.icon-safety:before   { content: "\F0FE"; }
-.icon-shelter:before  { content: "\F015"; }
-.icon-tools:before    { content: "\F0AD"; }
-
-
-
-
-//
-// dev stuff temporary
-//
-
-html {
-  //width: 384px; // min chrome width
-  background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAAHpk4xqAAAAElBMVEX6+vrs7Ozr6+vu7u7v7+/t7e3EXgZMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAHRJREFUKM/VzrERA0EQAsGdAfJPWRG8c55wuyi4xt3CDuCW9pCDnvOYl9HEq8bkMojcwHLYwpnUXjTrKZoLLd4a7KVtG0U9ZYWFkQM0aZd5mQoKyYFqNsAbbcMo7AKbykbuX5In4pv2TT618tTi6Uaf6HvrB6gQAgdgFALaAAAAAElFTkSuQmCC);
-  
-  
-  body {
-    //width: 384px;
-  }
-  
-}
 
 // -----------------------------------------------------------------------------
 // End of template

@@ -1,0 +1,28 @@
+#header {
+  background-image: url("../img/header_bg.png");
+  height: 225px;
+  text-indent: -999em;
+  
+  @include breakpoint(tablet) {
+    height: 300px;
+  }
+  
+  &, .logo {
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  
+  .logo {
+    background-image: url("../img/header_logo.png");
+    height: 100%;
+    
+    @include breakpoint-exact($tablet) {
+      background-size: 320px auto;
+    }
+      
+    h1, h2 {
+      margin: 0;
+    }
+  }
+}
+
