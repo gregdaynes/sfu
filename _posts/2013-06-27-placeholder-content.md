@@ -9,7 +9,7 @@ excerpt: 'Hello World'
 
 author: Gregory Daynes
 twitter: gregdaynes
-leadImage: http://lorempixel.com/800/600/nature/
+leadImage: holder.js/800x600/industrial
 
 ratingQuality: na
 ratingDesign: 2
@@ -18,13 +18,16 @@ ratingUse: 4
 ratingGeneral: 5
 
 gallery: 
-  - http://lorempixel.com/800/600/abstract/
-  - http://lorempixel.com/800/600/city/
-  - http://lorempixel.com/800/600/people/
-  - http://lorempixel.com/800/600/transport/
-  - http://lorempixel.com/800/600/animals/
-  - http://lorempixel.com/800/600/food/
-  - http://lorempixel.com/800/600/business/
+  - holder.js/100x100/gray
+  - holder.js/100x100/social
+  - holder.js/100x100/industrial
+  - holder.js/100x100/gray
+  - holder.js/100x100/social
+  - holder.js/100x100/industrial
+  - holder.js/100x100/social
+  - holder.js/100x100/gray
+  - holder.js/100x100/social
+  - holder.js/100x100/industrial
 ---
 
 ## Introduction
