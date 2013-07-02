@@ -34,3 +34,17 @@
   font-size: ($font-size) + px;
   font-size: ($font-size / 10) + rem;
 }
+
+//https://github.com/filamentgroup/scoped-media-query
+@mixin scopedmediaquery($queries...) {
+    $length: length($queries);
+    @for $i from 1 through $length{
+        @if $i % 2 == 1 {
+            @media #{nth($queries, $i)} {
+                #{nth($queries, $i+1)} {
+                  @content;
+                }
+            }
+        }
+    }
+}
