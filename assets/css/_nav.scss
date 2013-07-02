@@ -1,70 +1,54 @@
+// section header
+h2 {
+  display: none;
+}
+
 // menu display
 .handler, .handler-icon {
   display: none;
-} 
+}
+
+#nav, .handler-icon {
+  background-color: $baseL;
+  color: #fff;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  text-decoration: inherit;
+  display: inline-block;
+  width: 32px;
+  text-align: center;
+}
+// icons
+.icon-everything:before { content: "\F0AC"; }
+.icon-carry:before    { content: "\f0f2"; }
+.icon-clothing:before { content: "\f007"; }
+.icon-devices:before  { content: "\f10b"; }
+.icon-dining:before   { content: "\F0F5"; }
+.icon-safety:before   { content: "\F0FE"; }
+.icon-shelter:before  { content: "\F015"; }
+.icon-tools:before    { content: "\F0AD"; }
 
 ul {
   list-style: none;
+  margin: 0;
   padding: 0;
   
   li {
-    display: inline;
-  }
-}
-
-
-// responsive menu
-@include breakpoint-exact(500px) {
-  html {
-    overflow-x: hidden;
-  }
-
-  $navMenuWidth: 90%;
-  $transitionSpeed: .3s;
-  
-  .wrapper {
-    left: 0;
-    position: relative;
-    -webkit-transition: left $transitionSpeed ease-in-out;
-       -moz-transition: left $transitionSpeed ease-in-out;
-  }
-  
-  #nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    z-index: 1;
-    overflow: hidden;
-    background-color: white;
-    -webkit-transition: width $transitionSpeed ease-in-out;
-       -moz-transition: width $transitionSpeed ease-in-out;
-      
-    ul {
-      li a {
-        display: block;
-      }
+    
+    a { 
+      @include font-size(16);
+      line-height: 2.1;
+      text-decoration: none;
+      display: block;
+      padding: 0 10px;      
+      color: #fff;
+      border-bottom: 1px solid $baseD;
     }
-  }
-  
-  .handler-icon {
-    position: absolute;
-    display: inline;
-  }
-  
-  .handler {    
-    &#handler:checked {
-      & ~ #nav {
-        width: $navMenuWidth;
-      }
-        
-      & ~ .wrapper {
-        
-        left: $navMenuWidth;
-          
-        
-      }
+    
+    a:hover {
+      background-color: lighten($baseL, 10%);
     }
   }
 }
