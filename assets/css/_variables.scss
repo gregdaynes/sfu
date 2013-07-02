@@ -3,3 +3,26 @@ $mobile:  320px;  // 767px;  // 320 -> 767
 $tablet:  768px;  // 1023px; // 767 -> 1023
 $desktop: 1024px; // 1279px; // 1024 -> 1279
 $large:   1280px; // 1280+
+
+
+// primary
+$b:  #e67e22; // carrot
+$bL: #f39c12; // orange
+$bD: #d35400; // pumpkin
+
+// secondary
+$b2:  #2ecc71; // emerald
+$b2L: lighten($b2, 10%);
+$b2D: #27ae60; // nephritis
+
+// grays
+$gray: #bdc3c7; // silver
+$grayL: #ecf0f1; // clouds
+$grayD: #95a5a6; // concrete
+$grayDD: #7f8c8d; // asbestos
+
+// behind
+$baseD: #2c3e50; // midnight blue
+$baseL: #34495e; // wet asphalt
+
+ 
