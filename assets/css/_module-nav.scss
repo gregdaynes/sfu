@@ -76,17 +76,15 @@ $transitionSpeed: .3s;
     border: 1px solid darken($secondarycolor, 5);
     border-top: none;
     border-left-color: lighten($secondarycolor, 5);
-    color: $white;
-    width: 32px;
-    height: 32px;
-    line-height: 32px;
     
     i {
-      margin-left: -2px;
-    }
-    
-    &:hover {
-      cursor: pointer;
+      display: block;
+      width: 26px;
+      height: 26px;
+            
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
     
