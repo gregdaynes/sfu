@@ -9,7 +9,7 @@ excerpt: 'Hello World'
 
 author: Gregory Daynes
 twitter: gregdaynes
-leadImage: holder.js/800x600/industrial
+leadImage: /assets/img/graph-750x250.png
 
 ratingQuality: na
 ratingDesign: 2
@@ -17,17 +17,7 @@ ratingCost: 3
 ratingUse: 4
 ratingGeneral: 5
 
-gallery: 
-  - holder.js/100x100/gray
-  - holder.js/100x100/social
-  - holder.js/100x100/industrial
-  - holder.js/100x100/gray
-  - holder.js/100x100/social
-  - holder.js/100x100/industrial
-  - holder.js/100x100/social
-  - holder.js/100x100/gray
-  - holder.js/100x100/social
-  - holder.js/100x100/industrial
+gallery: assets/img/graph-750x250.png
 ---
 
 ## Introduction

@@ -1,9 +1,9 @@
 // IMPORTS
-@import "http://cdnjs.cloudflare.com/ajax/libs/normalize/2.1.0/normalize.css";
-@import "http://cdnjs.cloudflare.com/ajax/libs/normalize/2.1.0/normalize.css";
+
 @import "variables";
-@import "bourbon/bourbon";
-@import "neat/neat";
+@import "_vendor/normalize";
+@import "_vendor/bourbon/bourbon";
+@import "_vendor/neat/neat";
 @import "mixins";
 
 // SMACSS
