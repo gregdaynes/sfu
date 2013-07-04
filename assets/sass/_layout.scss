@@ -1,0 +1,8 @@
+// Header
+#header {
+  height: 225px;
+  
+  @include breakpoint($bp3, min, width) {
+    height: 300px;
+  }
+}

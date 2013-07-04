@@ -1,29 +1,15 @@
-// 480px 	30em
-// 600px 	37.5em
-// 768px 	48em
-// 992px 	62em
-// 1382px	86.375em
-
-$bp2 							: 30em;  		
-$bp3 							: 37.5em;  	
-$bp4 							: 48em;  		
-$bp5 							: 62em; 		
-$bp6 							: 86.375em; 	
+$bp2: 30em;     // 480px
+$bp3: 37.5em;   // 600px
+$bp4: 48em;  	  // 768px
+$bp5: 62em; 	  // 992px
+$bp6: 86.375em; // 1382px
 
 // Does your design needs a maximum width to maintain readable line lengths? 
-$maxwidth						: 90em;
+$maxwidth: 90em;
 
 // What is the class name that the media query mixin should use to target 
 // browsers not supporting media queries?
-$no-mq-classname 				: ".lt-ie9";
-
-
-
-// Now define your design’s typography by setting a base typeface and size
-$basefontfamily 				: Palatino, "Times New Roman", Times, serif;
-
-// Often you’ll use an alternative typeface (eg: for buttons, form inputs and tables)
-$altfontfamily 					: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$no-mq-classname: ".lt-ie9";
 
 
 // COLOUR ================================================

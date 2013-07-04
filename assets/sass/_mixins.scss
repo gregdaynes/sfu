@@ -188,26 +188,19 @@
  *
  *
  *
- * @include media-query-bp(UNIT, QUERY PART LEFT, QUERY PART RIGHT, TARGET)
+ * @include breakpoint(UNIT, QUERY PART LEFT, QUERY PART RIGHT, TARGET)
  */
 @mixin breakpoint($unit, $query1: min, $query2: width, $target: "")
 {
 	$mqtarget: "";
-	// Check if media queries are supported
-	@if $media-queries-supported == true {
-		@if $target != "" {
-			@media #{$target} and (#{$query1}-#{$query2}: #{$unit}) {
-				@content;
-			}
-		}
-		@else {
-			@media (#{$query1}-#{$query2}: #{$unit}) {
-				@content;
-			}
+  // Check if media queries are supported
+	@if $target != "" {
+		@media #{$target} and (#{$query1}-#{$query2}: #{$unit}) {
+			@content;
 		}
 	}
 	@else {
-		#{$no-mq-classname} & {
+		@media (#{$query1}-#{$query2}: #{$unit}) {
 			@content;
 		}
 	}

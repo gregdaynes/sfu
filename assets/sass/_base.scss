@@ -32,8 +32,7 @@ html {
  * 2. Unitless `line-height`, which acts as a multiple of the root `font-size`
  */
 body {
-	font-size: 1rem;  /* 1 */
-	line-height: 1.5; /* 2 */
+	@include font-size(16);
 }
 
 /*
@@ -86,8 +85,7 @@ img {
 
 fieldset {
   border: 0;
-  margin: 0;
-  padding: 0;
+  @include zero;
 }
 
 /*
@@ -108,7 +106,7 @@ audio {
 img,
 video {
 	max-width: 100%;
-	width: auto\9;
+	width: auto;
 	height: auto !important;
 }
 
@@ -144,9 +142,12 @@ table,
 textarea,
 td,
 th {
-	-webkit-hyphens: auto;
-	-moz-hyphens:    auto;
-	-ms-hyphens:     auto;
-	hyphens:         auto;
+	@include css-hyphens(auto);
 	word-wrap: break-word;
+}
+
+// NAV
+.handler, .handler-icon {
+  // hide when not using responsive menu
+  display: none;
 }
