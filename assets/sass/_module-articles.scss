@@ -1,0 +1,56 @@
+.article-list {
+  list-style: none;
+  @include zero;
+  
+  li {
+    article {
+    
+      .icon-stack {
+        text-align: center;
+        .icon-circle.icon-stack-base {
+        }
+        
+        .icon-category.icon-light {
+          text-align: center;
+        }
+      }
+      
+      img {
+      
+      }
+      
+      header {
+        hgroup {
+          
+          h1 {
+          
+          }
+          
+          h3 {
+          
+          }
+        }
+        
+        ul {
+          list-style: none;
+          @include zero;
+          
+          li {
+            display: inline;
+            a {
+            
+            }
+          }
+        }
+      }
+      
+      p {
+      
+      }
+      
+      a {
+      
+      }
+    }
+  }
+}

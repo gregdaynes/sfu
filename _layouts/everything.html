@@ -4,11 +4,15 @@ body-class: list
 ---
 <section id="content">
 
-  <ul>
+  <ul class="article-list">
     {% for item in site.posts %}
       {% if item.type != "static" %}
-        <article>
-          <i class="icon-{{item.category}}"></i>
+        <li>
+        <article>          
+          <span class="icon-stack">
+            <i class="icon-circle icon-stack-base"></i>
+            <i class="icon-category icon-{{item.category}} icon-light"></i>
+          </span>
           <img src="{{item.leadImage}}">
           
           <header>
@@ -25,6 +29,7 @@ body-class: list
           
           <p>{{item.excerpt}} <a class="btn-primary" href="{{item.url}}">Read More</a></p>
         </article>
+        </li>
       {% endif %}
     {% endfor %}
   </ul>

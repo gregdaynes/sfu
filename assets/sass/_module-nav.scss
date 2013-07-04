@@ -17,30 +17,27 @@ $transitionSpeed: .3s;
       display: inline;
       
       @include breakpoint($bp3, max, width) {
-        display: inherit;
-        
-        a {
-          display: block;
-          border-bottom: 1px solid darken($secondarycolor, 5);
-          border-top: 1px solid lighten($secondarycolor, 5);
-        }
-        
+        display: inherit;        
       }
     }
     
     a {
+      display: block;
       text-decoration: none;
       color: $white;
+      border-bottom: 1px solid darken($secondarycolor, 5);
+      border-top: 1px solid lighten($secondarycolor, 5);
       -webkit-transition: padding $transitionSpeed ease-in-out;
          -moz-transition: padding $transitionSpeed ease-in-out;
            -o-transition: padding $transitionSpeed ease-in-out;
               transition: padding $transitionSpeed ease-in-out;
+      padding-left: 5px;
       @include font-size(24);
             
       
       &:hover {
         background-color: lighten($secondarycolor, 5);
-        padding-left: 5px;
+        padding-left: 10px;
       }
       
       &:active {
