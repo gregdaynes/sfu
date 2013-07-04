@@ -24,25 +24,15 @@ html {
 	overflow-y: scroll;             /* 1 */
 	-webkit-text-size-adjust: 100%; /* 2 */
 	text-size-adjust:         100%; /* 2 */
+	font-size: 62.5%; /* 10px */
 }
-
-
-html {
-  font-size: 75%; /* 12px */
-  @include breakpoint(basic) { font-size: 81.25%; }
-  @include breakpoint(mobile) { font-size: 87.5%; }
-  @include breakpoint(tablet) { font-size: 100%; }
-  @include breakpoint(desktop) { font-size: 112.5%; }
-  @include breakpoint(large) { font-size: 150%; }
-} 
 
 /**
  * 1. Inherits percentage declared on above <html> as the root `font-size`
  * 2. Unitless `line-height`, which acts as a multiple of the root `font-size`
  */
 body {
-	font-size: 1rem;  /* 1 */
-	line-height: 1.5; /* 2 */
+	@include font-size(16);
 }
 
 /*
@@ -95,8 +85,7 @@ img {
 
 fieldset {
   border: 0;
-  margin: 0;
-  padding: 0;
+  @include zero;
 }
 
 /*
@@ -117,7 +106,7 @@ audio {
 img,
 video {
 	max-width: 100%;
-	width: auto\9;
+	width: auto;
 	height: auto !important;
 }
 
@@ -153,9 +142,12 @@ table,
 textarea,
 td,
 th {
-	-webkit-hyphens: auto;
-	-moz-hyphens:    auto;
-	-ms-hyphens:     auto;
-	hyphens:         auto;
+	@include css-hyphens(auto);
 	word-wrap: break-word;
+}
+
+// NAV
+.handler, .handler-icon {
+  // hide when not using responsive menu
+  display: none;
 }

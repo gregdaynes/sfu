@@ -1,28 +1,42 @@
-$basic:   319px;  // < 320
-$mobile:  320px;  // 767px;  // 320 -> 767
-$tablet:  768px;  // 1023px; // 767 -> 1023
-$desktop: 1024px; // 1279px; // 1024 -> 1279
-$large:   1280px; // 1280+
+$bp2: 30em;     // 480px
+$bp3: 37.5em;   // 600px
+$bp4: 48em;  	  // 768px
+$bp5: 62em; 	  // 992px
+$bp6: 86.375em; // 1382px
+
+// Does your design needs a maximum width to maintain readable line lengths? 
+$maxwidth: 90em;
+
+// What is the class name that the media query mixin should use to target 
+// browsers not supporting media queries?
+$no-mq-classname: ".lt-ie9";
 
 
-// primary
-$b:  #e67e22; // carrot
-$bL: #f39c12; // orange
-$bD: #d35400; // pumpkin
+// COLOUR ================================================
+$primarycolor 					: rgb(146,154,0);
+$secondarycolor 				: rgb(164,50,21);
+$tertiarycolor 					: rgb(41,47,54);
 
-// secondary
-$b2:  #2ecc71; // emerald
-$b2L: lighten($b2, 10%);
-$b2D: #27ae60; // nephritis
+$neutralcolor 					: rgb(71,63,63);
+$midneutralcolor 				: darken($neutralcolor,25%);
+$darkneutralcolor 			: darken($neutralcolor,50%);
+$lightneutralcolor 			: lighten($neutralcolor,25%);
+$lighterneutralcolor 		: lighten($neutralcolor,50%);
+$lightestneutralcolor 	: lighten($neutralcolor,70%);
 
-// grays
-$gray: #bdc3c7; // silver
-$grayL: #ecf0f1; // clouds
-$grayD: #95a5a6; // concrete
-$grayDD: #7f8c8d; // asbestos
+$black 							: rgb(0,0,0);
+$white 							: rgb(255,255,255);
 
-// behind
-$baseD: #2c3e50; // midnight blue
-$baseL: #34495e; // wet asphalt
+$linkcolor 		    			: $primarycolor;
+$linkcolorhover 				: lighten($linkcolor, 10%);
+$linkcolorvisited   		: darken($linkcolorhover, 10%);
+$linkcolorfocus 				: darken($linkcolorvisited, 10%);
 
- 
+$alertcolor 					: rgb(218,79,73);
+$errorcolor 					: rgb(176,20,0);
+$infocolor 						: rgb(216,220,162);
+$inversecolor 				: rgb(65,65,65);
+$successcolor 				: rgb(188,212,222);
+$warningcolor 				: $errorcolor;
+
+

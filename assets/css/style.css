@@ -1,16 +1,127 @@
 @import "http://cdnjs.cloudflare.com/ajax/libs/normalize/2.1.0/normalize.css";
-@import "http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css";
+@import "http://cdnjs.cloudflare.com/ajax/libs/normalize/2.1.0/normalize.css";
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-/*
- * breakpoint
+/**
+ * Font-Size
  *
- * use bubbling to create breakpoints of current selector
+ * rem for browsers with support
+ * px for ones without
  *
- * @include breakpoint(basic) 
+ * @include font-size(24)
+ */
+/**
+ * CSS-Hyphens [Malarky/Rock-Hammer]
+ *
+ * how to go about splitting words to improve the layout of text when line-wrapping.
+ *
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/hyphens
+ * 
+ * @include css-hyphens( none | manual | auto)
+ */
+/**
+ * Hide [based on Malarky/Rock-Hammer] 
+ *
+ * hide elements based on requirement
+ * 
+ * @include hide(hidden | hide-text | invisible | visually-hidden | image-replacement)
+ */
+/**
+ * Box-Shadow [Malarky/Rock-Hammer]
+ *
+ * @include box-shadow(horizontal vertical blur color)
+ */
+/**
+ * Drop-Shadow [Malarky/Rock-Hammer]
+ *
+ * @include drop-shadow( horizontal vertical blur color )
+ */
+/**
+ * Opacity [Malarky/Rock-Hammer]
+ *
+ * @include opacity( integer )
+ */
+/**
+ * Background-Size [Malarky/Rock-Hammer]
+ *
+ * @include background-size( auto | % | px )
+ */
+/**
+ * Background-Clip [Malarky/Rock-Hammer]
+ *
+ * @include background-clip( border-box | padding-box | content-box )
+ */
+/**
+ * Text-Overflow [Malarky/Rock-Hammer]
+ *
+ * @include text-overflow()
+ */
+/**
+ * Zero [Malarky/Rock-Hammer]
+ *
+ * zero out margin and padding
+ *
+ * @include zero()
+ */
+/**
+ * Breakpoint [Malarky/Rock-Hammer]
+ *
+ *
+ *
+ *
+ * @include breakpoint(UNIT, QUERY PART LEFT, QUERY PART RIGHT, TARGET)
+ */
+/**
+ * Clearfix
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+/**
+ * Flexbox
+ */
+/**
+ * Flex
+ *
+ * @include flex( 1, 200px)
+ */
+/**
+ * Flex-Direction
+ *
+ * @include flex-direction( row | row-reverse | column | column-reverse)
+ */
+/**
+ * Flex-Wrap
+ *
+ * @include flex-wrap( nowrap | wrap | wrap-reverse )
+ */
+/**
+ * Content-Justify
+ *
+ * @include content-justify( flex-start | flex-end | center | space-between | space-around )
+ */
+/**
+ * Align-Items
+ *
+ * @include align-items( flex-start | flex-end | center | baseline | stretch )
+ */
+/**
+ * Align-Content
+ *
+ * @include align-content( flex-start | flex-end | center |  space-between | space-around | stretch )
+ */
+/**
+ * Order
+ *
+ * @include order( integer )
  */
 /* `border-box`... ALL THE THINGS - http://cbrac.co/RQrDL5 */
 *,
@@ -37,36 +148,18 @@ html {
   -webkit-text-size-adjust: 100%;
   /* 2 */
   text-size-adjust: 100%;
-  /* 2 */ }
-
-html {
-  font-size: 75%;
-  /* 12px */ }
-  @media (max-width: 319px) {
-    html {
-      font-size: 81.25%; } }
-  @media (min-width: 320px) {
-    html {
-      font-size: 87.5%; } }
-  @media (min-width: 768px) {
-    html {
-      font-size: 100%; } }
-  @media (min-width: 1024px) {
-    html {
-      font-size: 112.5%; } }
-  @media (min-width: 1280px) {
-    html {
-      font-size: 150%; } }
+  /* 2 */
+  font-size: 62.5%;
+  /* 10px */ }
 
 /**
  * 1. Inherits percentage declared on above <html> as the root `font-size`
  * 2. Unitless `line-height`, which acts as a multiple of the root `font-size`
  */
 body {
-  font-size: 1rem;
-  /* 1 */
-  line-height: 1.5;
-  /* 2 */ }
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.6; }
 
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
@@ -124,7 +217,7 @@ audio {
 img,
 video {
   max-width: 100%;
-  width: auto\9;
+  width: auto;
   height: auto !important; }
 
 abbr,
@@ -162,139 +255,161 @@ th {
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
+  -o-hyphens: auto;
   hyphens: auto;
   word-wrap: break-word; }
-
-#header .logo h1 {
-  font-size: 28px;
-  font-size: 2.8rem;
-  text-align: center;
-  font-weight: 800; }
 
 .handler, .handler-icon {
   display: none; }
 
-.icon-everything:before {
-  content: "\F0AC"; }
+#header {
+  height: 225px; }
+  @media (min-width: 37.5em) {
+    #header {
+      height: 300px; } }
 
-.icon-carry:before {
-  content: "\f0f2"; }
+.nav {
+  background-color: #a43215; }
+  .nav h2 {
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0; }
+    .nav h2.focusable:active, .nav h2.focusable:focus {
+      position: static;
+      clip: auto;
+      height: auto;
+      width: auto;
+      margin: 0;
+      overflow: visible; }
+  .nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .nav ul li {
+      display: inline; }
+      @media (max-width: 37.5em) {
+        .nav ul li {
+          display: inherit; } }
+    .nav ul a {
+      display: block;
+      text-decoration: none;
+      color: white;
+      border-bottom: 1px solid #8d2b12;
+      border-top: 1px solid #bb3918;
+      -webkit-transition: padding 0.3s ease-in-out;
+      -moz-transition: padding 0.3s ease-in-out;
+      -o-transition: padding 0.3s ease-in-out;
+      transition: padding 0.3s ease-in-out;
+      padding-left: 5px;
+      font-size: 24px;
+      font-size: 2.4rem;
+      line-height: 1.6; }
+      .nav ul a:hover {
+        background-color: #bb3918;
+        padding-left: 10px; }
+      .nav ul a:active {
+        background-color: #8d2b12;
+        border-top-color: #8d2b12; }
 
-.icon-clothing:before {
-  content: "\f007"; }
+@media (max-width: 37.5em) {
+  .nav {
+    position: fixed;
+    top: 0;
+    left: -90%;
+    bottom: 0;
+    width: 90%;
+    z-index: 1;
+    overflow: hidden;
+    border-right: 1px solid #8d2b12; }
 
-.icon-devices:before {
-  content: "\f10b"; }
+  .nav,
+  .handler-icon {
+    -webkit-transition: left 0.3s ease-in-out;
+    -moz-transition: left 0.3s ease-in-out; }
 
-.icon-dining:before {
-  content: "\F0F5"; }
+  .handler-icon {
+    position: absolute;
+    display: inline;
+    text-align: center;
+    z-index: 1;
+    background-color: #a43215;
+    border: 1px solid #8d2b12;
+    border-top: none;
+    border-left-color: #bb3918;
+    color: white;
+    width: 32px;
+    height: 32px;
+    line-height: 32px; }
+    .handler-icon i {
+      margin-left: -2px; }
+    .handler-icon:hover {
+      cursor: pointer; }
 
-.icon-safety:before {
-  content: "\F0FE"; }
-
-.icon-shelter:before {
-  content: "\F015"; }
-
-.icon-tools:before {
-  content: "\F0AD"; }
-
-body {
-  background-color: #e4e4e4;
-  color: white; }
-
-a {
-  color: #5c743a; }
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-/*
- * Image replacement
- */
-.ir {
-  background-color: transparent;
-  border: 0;
-  overflow: hidden;
-  /* IE 6/7 fallback */
-  *text-indent: -9999px; }
-
-.ir:before {
-  content: "";
-  display: block;
-  width: 0;
-  height: 150%; }
-
-/*
- * Hide from both screenreaders and browsers: h5bp.com/u
- */
-.hidden {
-  display: none !important;
-  visibility: hidden; }
-
-/*
- * Hide only visually, but have it available for screenreaders: h5bp.com/v
- */
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px; }
-
-/*
- * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p
- */
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-  clip: auto;
-  height: auto;
+  .handler#handler:checked ~ #nav {
+    left: 0; }
+  .handler#handler:checked ~ .wrapper .handler-icon {
+    left: 90%; } }
+.article-list {
+  list-style: none;
   margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto; }
+  padding: 0; }
+  .article-list li article .icon-stack {
+    text-align: center; }
+    .article-list li article .icon-stack .icon-category.icon-light {
+      text-align: center; }
+  .article-list li article header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .article-list li article header ul li {
+      display: inline; }
 
-/*
- * Hide visually and from screenreaders, but maintain layout
- */
-.invisible {
-  visibility: hidden; }
+[class^="icon-"] {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-position: center center;
+  background-repeat: no-repeat; }
 
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */ }
+.icon-carry {
+  fill: #94d31b; }
 
-.clearfix:after {
-  clear: both; }
-
-/*
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-.clearfix {
-  *zoom: 1; }
+#header {
+  background-image: url("../img/header_bg.png"); }
+  #header, #header .logo {
+    background-repeat: no-repeat;
+    background-position: center center; }
+  #header .logo {
+    background-image: url("../img/header_logo.png");
+    height: 100%;
+    background-color: transparent;
+    border: 0;
+    overflow: hidden; }
+    #header .logo:before {
+      content: "";
+      display: block;
+      width: 0;
+      height: 150%; }
+    @media (max-width: 37.5em) {
+      #header .logo {
+        -webkit-background-size: 320px auto;
+        -moz-background-size: 320px auto;
+        -o-background-size: 320px auto;
+        background-size: 320px auto; } }
+    #header .logo h1,
+    #header .logo h2 {
+      margin: 0;
+      padding: 0; }
 
 /* ==========================================================================
-   Print styles.
-   Inlined to avoid required HTTP connection: h5bp.com/r
-   ========================================================================== */
+ Print styles.
+ Inlined to avoid required HTTP connection: h5bp.com/r
+ ========================================================================== */
 @media print {
   * {
     background: transparent !important;
@@ -349,5 +464,3 @@ a {
   h2,
   h3 {
     page-break-after: avoid; } }
-
-/*# sourceMappingURL=style.css.map */
