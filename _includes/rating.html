@@ -1,43 +1,32 @@
-<section id="rating">
+<section id="rating" class="rating">
   <h2>Ratings</h2>
-  
-  <h3>Quality</h3>
-  {% if page.ratingQuality == "na" %}
-    Not Applicable
-  {% else %}
-    {% for i in (1..page.ratingQuality) %}<i class="icon icon-star"></i>{% endfor %}
-    {% for n in (page.ratingQuality..4) %}<i class="icon icon-star-empty"></i>{% endfor %}
-  {% endif %}
-  
-  <h3>Design</h3>
-  {% if page.ratingDesign == "na" %}
-    Not Applicable
-  {% else %}
-    {% for i in (1..page.ratingDesign) %}<i class="icon icon-star"></i>{% endfor %}
-    {% for n in (page.ratingDesign..4) %}<i class="icon icon-star-empty"></i>{% endfor %}
-  {% endif %}
     
-  <h3>Cost</h3>
-  {% if page.ratingCost == "na" %}
-    Not Applicable
-  {% else %}
-    {% for i in (1..page.ratingCost) %}<i class="icon icon-star"></i>{% endfor %}
-    {% for n in (page.ratingCost..4) %}<i class="icon icon-star-empty"></i>{% endfor %}
-  {% endif %}
-  
-  <h3>Usefullness</h3>
-  {% if page.ratingUse == "na" %}
-    Not Applicable
-  {% else %}
-    {% for i in (1..page.ratingUse) %}<i class="icon icon-star"></i>{% endfor %}
-    {% for n in (page.ratingUse..4) %}<i class="icon icon-star-empty"></i>{% endfor %}
-  {% endif %}
+  {% for i in (0..page.rating.size) %}
+  <div class="rating-group">
+    {% case i %}
+      {% when 0 %}
+        <h3>Quality</h3>
+      {% when 1 %}
+        <h3>Design</h3>
+      {% when 2 %}
+        <h3>Cost</h3>
+      {% when 3 %}
+        <h3>Usefullness</h3>
+      {% when 4 %}
+        <h3>General</h3>
+    {% endcase %}
     
-  <h3>General</h3>
-  {% if page.ratingGeneral == "na" %}
-    Not Applicable
-  {% else %}
-    {% for i in (1..page.ratingGeneral) %}<i class="icon icon-star"></i>{% endfor %}
-    {% for n in (page.ratingGeneral..4) %}<i class="icon icon-star-empty"></i>{% endfor %}
-  {% endif %}
+    
+    <ul>
+    {% if page.rating[i] != null %}
+      {% if page.rating[i] == "na" %}
+        <li>Not Applicable</li>
+      {% else %}
+        {% for i in (1..page.rating[i]) %}<li><i class="icon icon-star"></i></li>{% endfor %}
+        {% for n in (page.rating[i]..4) %}<li><i class="icon icon-star-empty"></i></li>{% endfor %}
+      {% endif %}
+    {% endif %}
+    </ul>
+  </div>
+  {% endfor %}
 </section>
