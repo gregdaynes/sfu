@@ -2,16 +2,15 @@
 layout: default
 body-class: list
 ---
-<section id="content">
 
   <ul class="article-list">
     {% for item in site.posts %}
       {% if item.type != "static" %}
         <li>
         <article>          
-          <span class="icon-stack">
-            <i class="icon-circle icon-stack-base"></i>
-            <i class="icon-category icon-{{item.category}} icon-light"></i>
+          <span class="icon icon-stack">
+            <i class="icon-circle icon-base icon-dark"></i>
+            <i class="icon-category icon-{{item.category}}-light"></i>
           </span>
 
           <img src="{{item.leadImage}}">
@@ -35,6 +34,5 @@ body-class: list
       {% endif %}
     {% endfor %}
   </ul>
-</section>
 
 

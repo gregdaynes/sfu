@@ -6,7 +6,37 @@ body-class: list
 {% for item in site.categories[page.category] %}
   {% if item.type != "static" %}
 
-   {{item.title}}
+    <ul class="article-list">
+       {% for item in site.posts %}
+         {% if item.type != "static" %}
+           <li>
+           <article>          
+             <span class="icon icon-stack">
+               <i class="icon-circle icon-base icon-dark"></i>
+               <i class="icon-category icon-{{item.category}}-light"></i>
+             </span>
+   
+             <img src="{{item.leadImage}}">
+   
+             
+             <header>
+               <hgroup>
+                 <h1>{{item.title}}</h1>
+                 <h3>{{item.company}}</h3>
+               </hgroup>
+               
+               <ul>
+                 <li><a href="http://twitter.com/{{item.twitter}}">{{item.author}}</a></li>
+                 <li>{{ item.date | date: "%d %B %Y" }}</li>
+               </ul>
+             </header>
+             
+             <p>{{item.excerpt}} <a class="btn-primary" href="{{item.url}}">Read More</a></p>
+           </article>
+           </li>
+         {% endif %}
+       {% endfor %}
+     </ul>
  
   {% endif %}
 {% endfor %}
