@@ -1,0 +1,42 @@
+.gallery {
+
+  h2 {
+  
+  }
+  
+  ul {
+    list-style: none;
+    @include zero;
+    
+    li {
+      display: inline-block;
+      border: 1px solid $lighterneutralcolor;
+      width: 33%;
+      margin-right: 0.333333%;
+      padding: 1px;
+      
+      &:last-of-type {
+        margin-right: 0;
+      }
+      
+      div {
+        display: inline-block;
+        
+        a {
+          img {
+            margin-bottom: 1px;
+            width: 100%;
+          }
+        }
+        
+        h3 {
+          @include hide(hidden);
+        }
+        
+        p {
+          @include hide(hidden);
+        }
+      }
+    }
+  }
+}

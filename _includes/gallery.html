@@ -1,7 +1,8 @@
-<section>
+<section id="gallery" class="gallery">
   <h2>Gallery</h2>
   
-  {% for item in page.gallery %}
-    <img src="{{ item }}" width="100px">
-  {% endfor %}
+  <ul>
+  {% for pic in page.pictures %}<li><div><a href="{{ pic.url }}"><img src="{{ pic.thumbnail }}" alt="{{ pic.label }} - {{ pic.caption }}" /></a><h3>{{ pic.label }}</h3><p>{{ pic.caption }}</p></div></li>{% endfor %}
+  </ul>
 </section>
+
