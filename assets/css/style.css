@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v2.1.2 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -349,18 +350,20 @@ table {
  * how to go about splitting words to improve the layout of text when line-wrapping.
  *
  * https://developer.mozilla.org/en-US/docs/Web/CSS/hyphens
- * 
+ * http://caniuse.com/#search=css-hyphens
+ *
  * @include css-hyphens( none | manual | auto)
  */
+/**/
 /**
  * Hide [based on Malarky/Rock-Hammer] 
  *
  * hide elements based on requirement
  * 
- * @include hide(hidden | hide-text | invisible | visually-hidden | image-replacement)
+ * @include hide(hidden | hide-text | invisible | visually | image-replacement)
  */
 /**
- * Box-Shadow [Malarky/Rock-Hammer]
+ * Box-Shadow [Malarky/Rock-Hammer ]
  *
  * @include box-shadow(horizontal vertical blur color)
  */
@@ -368,11 +371,6 @@ table {
  * Drop-Shadow [Malarky/Rock-Hammer]
  *
  * @include drop-shadow( horizontal vertical blur color )
- */
-/**
- * Opacity [Malarky/Rock-Hammer]
- *
- * @include opacity( integer )
  */
 /**
  * Background-Size [Malarky/Rock-Hammer]
@@ -383,6 +381,11 @@ table {
  * Background-Clip [Malarky/Rock-Hammer]
  *
  * @include background-clip( border-box | padding-box | content-box )
+ */
+/**
+ * Box-Columns [CSS3Please.com]
+ *
+ * @include box-columns($count : 2, $gap : 20px)
  */
 /**
  * Text-Overflow [Malarky/Rock-Hammer]
@@ -397,10 +400,22 @@ table {
  * @include zero()
  */
 /**
+ * Box-Sizing [CSS3Please.com + Everyone]
+ *
+ * @include box-sizing
+ */
+/**
+ * Box-Rotate [CSS3Please.com]
+ *
+ * @include box-rotate(integer)
+ */
+/**
+ * Transition [CSS3Please.com]
+ *
+ * @include transition( $selector | all, $time | 0.3s | $style | ease-out )
+ */
+/**
  * Breakpoint [Malarky/Rock-Hammer]
- *
- *
- *
  *
  * @include breakpoint(UNIT, QUERY PART LEFT, QUERY PART RIGHT, TARGET)
  */
@@ -414,6 +429,11 @@ table {
  *    that receive the `clearfix` class.
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
+ */
+/**
+ * BP-Helper
+ *
+ * @include bp-helper
  */
 /**
  * Flexbox
@@ -458,8 +478,11 @@ table {
 *:before,
 *:after {
   -webkit-box-sizing: border-box;
+  /* Android ≤ 2.3, iOS ≤ 4 */
   -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+  /* Firefox 1+ */
+  box-sizing: border-box;
+  /* Chrome, IE 8+, Opera, Safari 5.1 */ }
 
 /* Set <html> and <body> to inherit the height of the viewport */
 html,
@@ -523,7 +546,8 @@ a:link {
  * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
  */
 img {
-  vertical-align: middle; }
+  vertical-align: middle;
+  width: 100%; }
 
 /*
  * Remove default fieldset styles.
@@ -598,6 +622,131 @@ th {
     #header {
       height: 300px; } }
 
+#subscribe {
+  padding: 0 20px;
+  color: #c6bfbf;
+  text-shadow: 0 -1px 0 #f6f5f5;
+  background-color: #f6f5f5;
+  border-top: 1px solid #eae7e7;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 1.6; }
+  #subscribe:before, #subscribe:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */ }
+  #subscribe:after {
+    clear: both; }
+  #subscribe .container {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto; }
+    #subscribe .container:before, #subscribe .container:after {
+      content: " ";
+      /* 1 */
+      display: table;
+      /* 2 */ }
+    #subscribe .container:after {
+      clear: both; }
+    #subscribe .container p {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 100%; }
+      #subscribe .container p:last-child {
+        margin-right: 0; }
+  #subscribe h2 {
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0; }
+    #subscribe h2.focusable:active, #subscribe h2.focusable:focus {
+      position: static;
+      clip: auto;
+      height: auto;
+      width: auto;
+      margin: 0;
+      overflow: visible; }
+
+#colophon {
+  color: #8a7b7b;
+  background-color: #c6bfbf;
+  padding: 0 20px; }
+  #colophon .container {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto; }
+    #colophon .container:before, #colophon .container:after {
+      content: " ";
+      /* 1 */
+      display: table;
+      /* 2 */ }
+    #colophon .container:after {
+      clear: both; }
+  #colophon h2 {
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0; }
+    #colophon h2.focusable:active, #colophon h2.focusable:focus {
+      position: static;
+      clip: auto;
+      height: auto;
+      width: auto;
+      margin: 0;
+      overflow: visible; }
+  #colophon section {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    text-align: center; }
+    #colophon section:last-child {
+      margin-right: 0; }
+
+#footer {
+  color: #473f3f;
+  padding: 0 20px;
+  background-color: #8a7b7b;
+  text-align: center;
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 1.6; }
+  #footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    #footer ul li {
+      display: inline; }
+  #footer a {
+    color: black;
+    text-decoration: none; }
+  #footer h2 {
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0; }
+    #footer h2.focusable:active, #footer h2.focusable:focus {
+      position: static;
+      clip: auto;
+      height: auto;
+      width: auto;
+      margin: 0;
+      overflow: visible; }
+
 .nav {
   background-color: #a43215; }
   .nav h2 {
@@ -646,6 +795,37 @@ th {
         background-color: #8d2b12;
         border-top-color: #8d2b12; }
 
+@media (min-width: 37.5em) {
+  .nav .container {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto; }
+    .nav .container:before, .nav .container:after {
+      content: " ";
+      /* 1 */
+      display: table;
+      /* 2 */ }
+    .nav .container:after {
+      clear: both; }
+  .nav ul {
+    display: table;
+    width: 100%; }
+    .nav ul li {
+      display: table-cell;
+      width: 1%;
+      float: none; }
+      .nav ul li a {
+        padding: 10px 0 0 0;
+        white-space: nowrap;
+        text-align: center;
+        font-size: 18px;
+        font-size: 1.8rem;
+        line-height: 1.6; }
+        .nav ul li a:hover {
+          padding-left: 0; }
+        .nav ul li a i {
+          display: block;
+          width: 100%; } }
 @media (max-width: 37.5em) {
   .nav {
     position: fixed;
@@ -686,68 +866,63 @@ th {
   list-style: none;
   margin: 0;
   padding: 0; }
-  .article-list li article {
+  .article-list > li:after {
+    border-bottom: 1px dotted #c6bfbf;
+    content: '';
+    display: block;
+    padding-top: 10px; }
+  .article-list > li:last-of-type:after {
+    border: none; }
+  .article-list > li:nth-of-type(2n) .image-wrapper {
+    float: right; }
+  .article-list > li article {
     margin: 20px 20px 0; }
-    .article-list li article:before, .article-list li article:after {
+    .article-list > li article:before, .article-list > li article:after {
       content: " ";
       /* 1 */
       display: table;
       /* 2 */ }
-    .article-list li article:after {
+    .article-list > li article:after {
       clear: both; }
-    .article-list li article:after {
-      border-bottom: 1px dotted #c6bfbf;
-      content: '';
-      display: block;
-      padding-top: 10px; }
-    .article-list li article .icon-stack {
+    .article-list > li article .icon-stack {
       margin: -16px 0 0 -16px; }
-    .article-list li article header {
-      margin-bottom: 10px; }
-      .article-list li article header:before, .article-list li article header:after {
-        content: " ";
-        /* 1 */
-        display: table;
-        /* 2 */ }
-      .article-list li article header:after {
-        clear: both; }
-      .article-list li article header hgroup h1 {
-        font-weight: 600;
-        margin: 0;
-        padding: 0;
-        font-size: 24px;
-        font-size: 2.4rem;
+    .article-list > li article .image-wrapper {
+      margin-bottom: 4px; }
+      @media (min-width: 48em) {
+        .article-list > li article .image-wrapper {
+          display: block;
+          float: left;
+          margin-right: 2.35765%;
+          width: 48.82117%; }
+          .article-list > li article .image-wrapper:last-child {
+            margin-right: 0; } }
+    .article-list > li article header h1 {
+      font-size: 24px;
+      font-size: 2.4rem;
+      line-height: 1.6;
+      font-weight: 400;
+      margin: 0;
+      padding: 0; }
+    .article-list > li article header h3 {
+      font-size: 18px;
+      font-size: 1.8rem;
+      line-height: 1.6;
+      font-weight: 200;
+      margin: 0;
+      padding: 0; }
+    .article-list > li article ul {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      .article-list > li article ul li {
+        display: inline;
+        color: #8a7b7b;
+        font-size: 12px;
+        font-size: 1.2rem;
         line-height: 1.6; }
-      .article-list li article header hgroup h3 {
-        font-weight: 200;
-        font-size: 18px;
-        font-size: 1.8rem;
-        line-height: 1.6;
-        margin: 0;
-        padding: 0; }
-      .article-list li article header ul {
-        border-bottom: 1px solid #f6f5f5;
-        list-style: none;
-        width: 100%;
-        padding: 0 0 10px;
-        margin: 0; }
-        .article-list li article header ul:before, .article-list li article header ul:after {
-          content: " ";
-          /* 1 */
-          display: table;
-          /* 2 */ }
-        .article-list li article header ul:after {
-          clear: both; }
-        .article-list li article header ul li {
-          width: 50%;
-          float: left; }
-        .article-list li article header ul li, .article-list li article header ul li a {
-          display: inline;
+        .article-list > li article ul li a {
           color: #8a7b7b;
-          text-decoration: none;
-          font-size: 12px;
-          font-size: 1.2rem;
-          line-height: 1.6; }
+          text-decoration: none; }
 
 .post {
   margin: 20px 20px 0; }
@@ -758,11 +933,6 @@ th {
     /* 2 */ }
   .post:after {
     clear: both; }
-  .post:after {
-    border-bottom: 1px dotted #c6bfbf;
-    content: '';
-    display: block;
-    padding-top: 10px; }
   .post .icon-stack {
     margin: -16px 0 0 -16px; }
   .post header:before, .post header:after {
@@ -809,31 +979,47 @@ th {
       font-size: 12px;
       font-size: 1.2rem;
       line-height: 1.6; }
-  .post .rating .rating-group:before, .post .rating .rating-group:after {
-    content: " ";
-    /* 1 */
-    display: table;
-    /* 2 */ }
-  .post .rating .rating-group:after {
-    clear: both; }
-  .post .rating .rating-group h3 {
-    font-size: 16px;
-    font-size: 1.6rem;
-    line-height: 1.6;
-    font-weight: normal;
+
+@media (min-width: 48em) {
+  .post .rating {
+    display: block;
     float: left;
-    margin: 0;
-    padding: 0; }
-  .post .rating .rating-group ul {
-    float: right;
-    list-style: none;
-    margin: 0;
-    padding: 0; }
-    .post .rating .rating-group ul li {
-      font-style: italic;
-      font-weight: 200;
-      color: #c6bfbf;
-      display: inline; }
+    margin-right: 2.35765%;
+    width: 48.82117%; }
+    .post .rating:last-child {
+      margin-right: 0; }
+  .post .gallery {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 48.82117%; }
+    .post .gallery:last-child {
+      margin-right: 0; } }
+.rating .rating-group:before, .rating .rating-group:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+.rating .rating-group:after {
+  clear: both; }
+.rating .rating-group h3 {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-weight: normal;
+  float: left;
+  margin: 0;
+  padding: 0; }
+.rating .rating-group ul {
+  float: right;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .rating .rating-group ul li {
+    font-style: italic;
+    font-weight: 200;
+    color: #c6bfbf;
+    display: inline; }
 
 .gallery ul {
   list-style: none;
@@ -907,7 +1093,6 @@ th {
   font-size: 1.4rem;
   line-height: 1.6;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
   background-color: #9ca400;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9ca400), color-stop(100%, #8d9500));
@@ -921,9 +1106,49 @@ th {
     border-top-color: #838b00;
     border-bottom: 1px solid transparent;
     -webkit-box-shadow: none;
-    -moz-box-shadow: none;
     box-shadow: none;
     background-image: none; }
+  [class^="btn-"] i,
+  [class*=" btn-"] i {
+    position: relative;
+    display: inline-block;
+    top: 3px; }
+
+.btn-action {
+  border-top-color: #cddfe6;
+  border-bottom-color: #b2cdd9;
+  background-color: #c3d8e1;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c3d8e1), color-stop(100%, #b9d2dc));
+  background-image: -webkit-linear-gradient(#c3d8e1, #b9d2dc);
+  background-image: linear-gradient(#c3d8e1, #b9d2dc); }
+  .btn-action:active {
+    border-top-color: #b2cdd9;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-image: none; }
+
+body:after {
+  content: 'no-bp';
+  display: block;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  opacity: 0.3; }
+  @media (min-width: 30em) {
+    body:after {
+      content: 'bp2'; } }
+  @media (min-width: 37.5em) {
+    body:after {
+      content: 'bp3'; } }
+  @media (min-width: 48em) {
+    body:after {
+      content: 'bp4'; } }
+  @media (min-width: 62em) {
+    body:after {
+      content: 'bp5'; } }
+  @media (min-width: 86.375em) {
+    body:after {
+      content: 'bp6'; } }
 
 #header {
   background-image: url("../img/header_bg.png"); }
@@ -944,8 +1169,6 @@ th {
     @media (max-width: 37.5em) {
       #header .logo {
         -webkit-background-size: 320px auto;
-        -moz-background-size: 320px auto;
-        -o-background-size: 320px auto;
         background-size: 320px auto; } }
     #header .logo h1,
     #header .logo h2 {
