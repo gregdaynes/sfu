@@ -2,9 +2,7 @@
 *,
 *:before,
 *:after {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing:    border-box;
-	box-sizing:         border-box;
+	@include box-sizing;
 }
 
 /* Set <html> and <body> to inherit the height of the viewport */
@@ -77,6 +75,7 @@ a:link {
 
 img {
   vertical-align: middle;
+  width: 100%;
 }
 
 /*
