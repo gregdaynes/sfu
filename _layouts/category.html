@@ -17,21 +17,22 @@ body-class: list
              </span>
    
              <img src="{{item.leadImage}}">
-   
              
-             <header>
-               <hgroup>
-                 <h1>{{item.title}}</h1>
-                 <h3>{{item.company}}</h3>
-               </hgroup>
+             <div>
+               <header>
+                 <hgroup>
+                   <h1>{{item.title}}</h1>
+                   <h3>{{item.company}}</h3>
+                 </hgroup>
+                 
+                 <ul>
+                   <li><a href="http://twitter.com/{{item.twitter}}">{{item.author}}</a></li>
+                   <li>{{ item.date | date: "%d %B %Y" }}</li>
+                 </ul>
+               </header>
                
-               <ul>
-                 <li><a href="http://twitter.com/{{item.twitter}}">{{item.author}}</a></li>
-                 <li>{{ item.date | date: "%d %B %Y" }}</li>
-               </ul>
-             </header>
-             
-             <p>{{item.excerpt}} <a class="btn-primary" href="{{item.url}}">Read More</a></p>
+               <p>{{item.excerpt}} <a class="btn-primary" href="{{item.url}}">Read More</a></p>
+             </div>
            </article>
            </li>
          {% endif %}
