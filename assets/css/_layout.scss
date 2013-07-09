@@ -6,3 +6,74 @@
     height: 300px;
   }
 }
+
+
+
+// Subscribe
+#subscribe {
+  padding: 0 20px;
+  color: $lighterneutralcolor;
+  text-shadow: 0 -1px 0 $lightestneutralcolor;
+  background-color: $lightestneutralcolor;
+  border-top: 1px solid darken($lightestneutralcolor, 5);
+  
+  @include font-size(24);
+  @include clearfix;
+  
+  .container {
+    @include outer-container;
+  
+    p {
+      @include span-columns(12);
+    }
+  }
+  
+  h2 {
+    @include hide(visually);
+  }
+}
+
+// Colophon
+#colophon {
+  color: $lightneutralcolor;
+  background-color: $lighterneutralcolor;
+  padding: 0 20px;
+  
+  .container { @include outer-container; }
+  
+  h2 {
+    @include hide(visually);
+  }
+  
+  section {
+    @include span-columns(6);
+    text-align: center;
+  }
+}
+
+// Footer
+#footer {
+  color: $neutralcolor;
+  padding: 0 20px;
+  background-color: $lightneutralcolor;
+  text-align: center;
+  @include font-size(12);
+  
+  ul {
+    list-style: none;
+    @include zero;
+    
+    li {
+      display: inline;
+    }
+  }
+  
+  a {
+    color: $darkneutralcolor;
+    text-decoration: none;
+  }
+  
+  h2 {
+    @include hide(visually);
+  }
+}
