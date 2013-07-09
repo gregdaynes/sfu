@@ -1,88 +1,28 @@
-.icon-carry-light {
-	background-image: url('png/carry-light.png');
-	background-repeat: no-repeat;
-}
-.icon-carry {
-	background-image: url('png/carry.png');
-	background-repeat: no-repeat;
-}
-.icon-clothing-light {
-	background-image: url('png/clothing-light.png');
-	background-repeat: no-repeat;
-}
-.icon-clothing {
-	background-image: url('png/clothing.png');
-	background-repeat: no-repeat;
-}
-.icon-devices-light {
-	background-image: url('png/devices-light.png');
-	background-repeat: no-repeat;
-}
-.icon-devices {
-	background-image: url('png/devices.png');
-	background-repeat: no-repeat;
-}
-.icon-dining-light {
-	background-image: url('png/dining-light.png');
-	background-repeat: no-repeat;
-}
-.icon-dining {
-	background-image: url('png/dining.png');
-	background-repeat: no-repeat;
-}
-.icon-everything-light {
-	background-image: url('png/everything-light.png');
-	background-repeat: no-repeat;
-}
-.icon-everything {
-	background-image: url('png/everything.png');
-	background-repeat: no-repeat;
-}
-.icon-expand-light {
-	background-image: url('png/expand-light.png');
-	background-repeat: no-repeat;
-}
-.icon-expand {
-	background-image: url('png/expand.png');
-	background-repeat: no-repeat;
-}
-.icon-safety-light {
-	background-image: url('png/safety-light.png');
-	background-repeat: no-repeat;
-}
-.icon-safety {
-	background-image: url('png/safety.png');
-	background-repeat: no-repeat;
-}
-.icon-shelter-light {
-	background-image: url('png/shelter-light.png');
-	background-repeat: no-repeat;
-}
-.icon-shelter {
-	background-image: url('png/shelter.png');
-	background-repeat: no-repeat;
-}
-.icon-star-empty-light {
-	background-image: url('png/star-empty-light.png');
-	background-repeat: no-repeat;
-}
-.icon-star-empty {
-	background-image: url('png/star-empty.png');
-	background-repeat: no-repeat;
-}
-.icon-star-light {
-	background-image: url('png/star-light.png');
-	background-repeat: no-repeat;
-}
-.icon-star {
-	background-image: url('png/star.png');
-	background-repeat: no-repeat;
-}
-.icon-tools-light {
-	background-image: url('png/tools-light.png');
-	background-repeat: no-repeat;
-}
-.icon-tools {
-	background-image: url('png/tools.png');
-	background-repeat: no-repeat;
-}
+.icon-carry-light { background-image: url('png/carry-light.png'); }
+.icon-carry { background-image: url('png/carry.png'); }
+.icon-clothing-light { background-image: url('png/clothing-light.png'); }
+.icon-clothing { background-image: url('png/clothing.png'); }
+.icon-devices-light { background-image: url('png/devices-light.png'); }
+.icon-devices { background-image: url('png/devices.png'); }
+.icon-dining-light { background-image: url('png/dining-light.png'); }
+.icon-dining { background-image: url('png/dining.png'); }
+.icon-everything-light { background-image: url('png/everything-light.png'); }
+.icon-everything { background-image: url('png/everything.png'); }
+.icon-expand-light { background-image: url('png/expand-light.png'); }
+.icon-expand { background-image: url('png/expand.png'); }
+.icon-safety-light { background-image: url('png/safety-light.png'); }
+.icon-safety { background-image: url('png/safety.png'); }
+.icon-send-light { background-image: url('png/send-light.png'); }
+.icon-send { background-image: url('png/send.png'); }
+.icon-shelter-light { background-image: url('png/shelter-light.png'); }
+.icon-shelter { background-image: url('png/shelter.png'); }
+.icon-star-empty-light { background-image: url('png/star-empty-light.png'); }
+.icon-star-empty { background-image: url('png/star-empty.png'); }
+.icon-star-light { background-image: url('png/star-light.png'); }
+.icon-star { background-image: url('png/star.png'); }
+.icon-tools-light { background-image: url('png/tools-light.png'); }
+.icon-tools { background-image: url('png/tools.png'); }
+.icon-twitter-light { background-image: url('png/twitter-light.png'); }
+.icon-twitter { background-image: url('png/twitter.png'); }
+.icon-user-light { background-image: url('png/user-light.png'); }
+.icon-user { background-image: url('png/user.png'); }
