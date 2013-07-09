@@ -1,0 +1,30 @@
+.rating {
+  h2 {
+    
+  }
+  
+  .rating-group {
+    @include clearfix;
+    
+    h3 {
+      @include font-size(16);
+      font-weight: normal;
+      float: left;
+      @include zero;
+    }
+    
+    ul {
+      float: right;
+      list-style: none;
+      @include zero;
+      
+      li {
+        font-style: italic;
+        font-weight: 200;
+        color: $lighterneutralcolor;
+        display: inline;
+      }
+    }
+  }
+  
+}
