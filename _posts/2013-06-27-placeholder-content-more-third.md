@@ -1,7 +1,7 @@
 ---
-title: Fastpack Litespeed
-company: Triple Aught Design
-company-url: http://tripleaughtdesign.com
+title: Placeholder Content 3
+company: Company Name
+company-url: http://company.com
 
 layout: post
 category: carry
