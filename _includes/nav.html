@@ -3,7 +3,7 @@
     <h2>Navigation</h2>
     <ul>
       <li><a class="{% if page.section == "home" %}active{% endif %}" href="/"><i class="icon-everything-light"></i> all reviews</a></li>
-      {% for category in site.categories %}
+      {% for category in site.categories %}      
       <li><a class="{% if page.section == "blog" %}active{% endif %}"href="/{{ category | first | slugize }}/"><i class="icon-{{category | first }}-light"></i> {{ category | first }}</a></li>
       {% endfor %} 
     </ul>

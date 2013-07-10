@@ -27,12 +27,12 @@ picture-path: /assets/images/placeholder-content
 leadImage: 
   - filename: header-image
     label: lead image label
-    caption: lead image caption
+    caption: 'lead image caption'
     ext: png
 pictures:
   - filename: header_colors
-    label: Label 1
-    caption: caption 1
+    label: 'Label 1'
+    caption: 'caption 1'
     thumbnail: 
     ext: png
 ---
