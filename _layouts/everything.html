@@ -13,12 +13,18 @@ body-class: list
                 <i class="icon-circle icon-base icon-dark"></i>
                 <i class="icon-category icon-{{item.category}}-light"></i>
               </span>
-              <img src="{{item.leadImage}}">
+              
+              <div class="lead-image"> 
+                {% for pic in item.leadImage %}
+                  {% include picture.html %}
+                {% endfor %}
+              </div>
+              
             </div>
             
             <header>
               <hgroup>
-                <h1>{{item.title}}</h1>
+                <h1>{{item.leadImage[filename]}} {{item.title}}</h1>
                 <h3>{{item.company}}</h3>
               </hgroup>
               

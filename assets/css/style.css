@@ -897,6 +897,10 @@ th {
           width: 48.82117%; }
           .article-list > li article .image-wrapper:last-child {
             margin-right: 0; } }
+    .article-list > li article img {
+      width: 100%;
+      max-width: 100%;
+      max-height: 100%; }
     .article-list > li article header h1 {
       font-size: 24px;
       font-size: 2.4rem;
@@ -936,6 +940,10 @@ th {
     clear: both; }
   .post .icon-stack {
     margin: -16px 0 0 -16px; }
+  .post img {
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%; }
   .post header:before, .post header:after {
     content: " ";
     /* 1 */
