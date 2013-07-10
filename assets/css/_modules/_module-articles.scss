@@ -15,12 +15,15 @@
       border: none;
     }
     
-    &:nth-of-type(2n) {
-      .image-wrapper {
-        float: right;
-        margin-left: 20px;
+    @include breakpoint($bp4, min, width) {
+      &:nth-of-type(2n) {
+        .image-wrapper {
+          float: right;
+          margin-left: 20px;
+        }
       }
     }
+    
     
   
     article {
