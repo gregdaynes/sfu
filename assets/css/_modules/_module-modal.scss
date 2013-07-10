@@ -1,0 +1,12 @@
+.gallery ul li div .modal-content {
+  .label {
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    
+    h3, p {
+      @include hide(un-hidden);
+    }
+  }
+}

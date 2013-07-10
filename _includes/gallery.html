@@ -2,7 +2,13 @@
   <h2>Gallery</h2>
   
   <ul>
-  {% for pic in page.pictures %}<li><div><a href="{{ pic.url }}">{% include picture.html %}</a><h3>{{ pic.label }}</h3><p>{{ pic.caption }}</p></div></li>{% endfor %}
+  {% for pic in page.pictures %}
+    <li>
+      <div>
+        {% include modal.html %}
+      </div>
+    </li>
+  {% endfor %}
   </ul>
 </section>
 
