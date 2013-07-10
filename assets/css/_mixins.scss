@@ -44,7 +44,7 @@
 {
   @if $type == hidden
   {
-    display: none !important;
+    display: none;
     visibility: hidden;
   }
   
@@ -82,6 +82,12 @@
         overflow: visible;
       } 
     }
+  }
+  
+  @if $type == un-hidden
+  {
+    display: inherit;
+    visibility: visible;
   }
   
   @if $type == image-replacement
