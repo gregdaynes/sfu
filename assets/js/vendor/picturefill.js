@@ -6,13 +6,13 @@
 	"use strict";
 
 	w.picturefill = function() {
-		var ps = w.document.getElementsByTagName( "span" );
+		var ps = w.document.getElementsByTagName( "picture" ); // changed from span to span
 
 		// Loop the pictures
 		for( var i = 0, il = ps.length; i < il; i++ ){
-			if( ps[ i ].getAttribute( "data-picture" ) !== null ){
+			// if( ps[ i ].getAttribute( "data-picture" ) !== null ){ // Not needed anymore
 
-				var sources = ps[ i ].getElementsByTagName( "span" ),
+				var sources = ps[ i ].getElementsByTagName( "source" ), // changed from span to source
 					matches = [];
 
 				// See if which sources match
@@ -40,7 +40,7 @@
 			else if( picImg ){
 				picImg.parentNode.removeChild( picImg );
 			}
-		}
+  	// }
 		}
 	};
 

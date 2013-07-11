@@ -4,24 +4,24 @@
   {% capture picturePath %}{{item.picture-path}}{% endcapture %}
 {% endif %}
 
-<span data-picture data-alt="{{ pic.label }} - {{ pic.caption }}">
-  <span data-src="{{picturePath}}/{{pic.filename}}-small.{{pic.ext}}"></span>
-  <span data-src="{{picturePath}}/{{pic.filename}}-small-2x.{{pic.ext}}"      data-media="(min-device-pixel-ratio: 2.0)"></span>
+<picture data-alt="{{ pic.label }} - {{ pic.caption }}">
+  <source data-src="{{picturePath}}/{{pic.filename}}-small.{{pic.ext}}">
+  <source data-src="{{picturePath}}/{{pic.filename}}-small-2x.{{pic.ext}}"      data-media="(min-device-pixel-ratio: 2.0)">
   
   <!-- 480px -->
-  <span data-src="{{picturePath}}/{{pic.filename}}-medium.{{pic.ext}}"        data-media="(min-width: 30em)"></span>
-  <span data-src="{{picturePath}}/{{pic.filename}}-medium-2x.{{pic.ext}}"     data-media="(min-width: 30em) and (min-device-pixel-ratio: 2.0)"></span>
+  <source data-src="{{picturePath}}/{{pic.filename}}-medium.{{pic.ext}}"        data-media="(min-width: 30em)">
+  <source data-src="{{picturePath}}/{{pic.filename}}-medium-2x.{{pic.ext}}"     data-media="(min-width: 30em) and (min-device-pixel-ratio: 2.0)">
   
   <!-- 768px -->
-  <span data-src="{{picturePath}}/{{pic.filename}}-large.{{pic.ext}}"         data-media="(min-width: 48em)"></span>
-  <span data-src="{{picturePath}}/{{pic.filename}}-large-2x.{{pic.ext}}"      data-media="(min-width: 48em) and (min-device-pixel-ratio: 2.0)"></span>    
+  <source data-src="{{picturePath}}/{{pic.filename}}-large.{{pic.ext}}"         data-media="(min-width: 48em)">
+  <source data-src="{{picturePath}}/{{pic.filename}}-large-2x.{{pic.ext}}"      data-media="(min-width: 48em) and (min-device-pixel-ratio: 2.0)">  
   
   <!-- 1000px -->
-  <span data-src="{{picturePath}}/{{pic.filename}}-extralarge.{{pic.ext}}"    data-media="(min-width: 62.5)"></span>
-  <span data-src="{{picturePath}}/{{pic.filename}}-extralarge-2x.{{pic.ext}}" data-media="(min-width: 62.5) and (min-device-pixel-ratio: 2.0)"></span>     
+  <source data-src="{{picturePath}}/{{pic.filename}}-extralarge.{{pic.ext}}"    data-media="(min-width: 62.5)">
+  <source data-src="{{picturePath}}/{{pic.filename}}-extralarge-2x.{{pic.ext}}" data-media="(min-width: 62.5) and (min-device-pixel-ratio: 2.0)">    
   
   <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
   <noscript>
-      <img src="{{picturePath}}/{{pic.filename}}-small.{{pic.ext}}" alt="{{ pic.label }} - {{ pic.caption }}">
+    <img src="{{picturePath}}/{{pic.filename}}-small.{{pic.ext}}" alt="{{ pic.label }} - {{ pic.caption }}">
   </noscript>
-</span>
+</picture>
