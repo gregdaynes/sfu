@@ -195,7 +195,7 @@
  */
 @mixin box-sizing
 {
-  -webkit-box-sizing: border-box; /* Android ≤ 2.3, iOS ≤ 4 */
+  -webkit-box-sizing: border-box; /* Android 2.3, iOS 4 */
      -moz-box-sizing: border-box; /* Firefox 1+ */
           box-sizing: border-box; /* Chrome, IE 8+, Opera, Safari 5.1 */
 }
@@ -224,7 +224,7 @@
 {
   -webkit-transition: $selector $time $style;  /* Chrome 1-25, Safari 3.2+ */
      -moz-transition: $selector $time $style;  /* Firefox 4-15 */
-       -o-transition: $selector $time $style;  /* Opera 10.50–12.00 */
+       -o-transition: $selector $time $style;  /* Opera 10.50-12.00 */
           transition: $selector $time $style;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
 }
 
