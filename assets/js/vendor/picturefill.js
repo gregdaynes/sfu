@@ -1,61 +1,54 @@
-/*! Picturefill - Responsive Images that work today. (and mimic the proposed Picture element with span elements). Author: Scott Jehl, Filament Group, 2012 | License: MIT/GPLv2 */
+/*! Responsive Images - Author: Gregory Daynes, 2013 — Based off of: Scott Jehl, Filament Group, 2012 | License: MIT/GPLv2 */
 
-(function( w ){
-
-	// Enable strict mode
-	"use strict";
-
-	w.picturefill = function() {
-		var ps = w.document.getElementsByTagName( "picture" ); // changed from span to span
-
-		// Loop the pictures
-		for( var i = 0, il = ps.length; i < il; i++ ){
-			// if( ps[ i ].getAttribute( "data-picture" ) !== null ){ // Not needed anymore
-
-				var sources = ps[ i ].getElementsByTagName( "source" ), // changed from span to source
-					matches = [];
-
-				// See if which sources match
-				for( var j = 0, jl = sources.length; j < jl; j++ ){
-					var media = sources[ j ].getAttribute( "data-media" );
-					// if there's no media specified, OR w.matchMedia is supported 
-					if( !media || ( w.matchMedia && w.matchMedia( media ).matches ) ){
-						matches.push( sources[ j ] );
-					}
-				}
-
-			// Find any existing img element in the picture element
-			var picImg = ps[ i ].getElementsByTagName( "img" )[ 0 ];
-
-			if( matches.length ){
-				var matchedEl = matches.pop();
-				if( !picImg || picImg.parentNode.nodeName === "NOSCRIPT" ){
-					picImg = w.document.createElement( "img" );
-					picImg.alt = ps[ i ].getAttribute( "data-alt" );
-				}
-
-				picImg.src =  matchedEl.getAttribute( "data-src" );
-				matchedEl.appendChild( picImg );
-			}
-			else if( picImg ){
-				picImg.parentNode.removeChild( picImg );
-			}
-  	// }
-		}
-	};
-
-	// Run on resize and domready (w.load as a fallback)
+(function( w )
+{
+  // enable strict mode
+  "use strict";
+  
+  w.respimg = function()
+  {
+    var     imgs = w.document.getElementsByTagName( 'img' ),
+           media = ['', '(min-width: 30em)', '(min-width: 48em)', '(min-width: 62.5em)' ],
+        mediadef = ['small', 'medium', 'large', 'extralarge'];
+        
+    var mediaMatch = null;
+        
+    // match media to window
+    for ( var m = 0, ml = media.length; m < ml; m++ )
+    {
+      if (w.matchMedia(media[m]).matches)
+      {
+        mediaMatch = mediadef[m];
+      }
+    }
+    
+    // loop the images
+    for ( var i = 0, il = imgs.length; i < il; i ++ )
+    {
+      // has data
+      if ( imgs[ i ].getAttribute("data-small" ) !== null 
+        || imgs[ i ].getAttribute("data-medium") !== null 
+        || imgs[ i ].getAttribute("data-large" ) !== null
+        || imgs[ i ].getAttribute("data-extralarge") !== null )
+      {        
+        // replace img src
+        imgs[i].src = imgs[i].getAttribute('data-'+mediaMatch)
+      }
+    }
+    
+  };
+  
+  // Run on resize and domready (w.load as a fallback)
 	if( w.addEventListener ){
-		w.addEventListener( "resize", w.picturefill, false );
+		w.addEventListener( "resize", w.respimg, false );
 		w.addEventListener( "DOMContentLoaded", function(){
-			w.picturefill();
+			w.respimg();
 			// Run once only
-			w.removeEventListener( "load", w.picturefill, false );
+			w.removeEventListener( "load", w.respimg, false );
 		}, false );
-		w.addEventListener( "load", w.picturefill, false );
+		w.addEventListener( "load", w.respimg, false );
 	}
 	else if( w.attachEvent ){
-		w.attachEvent( "onload", w.picturefill );
+		w.attachEvent( "onload", w.respimg );
 	}
-
 }( this ));
