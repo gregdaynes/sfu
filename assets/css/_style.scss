@@ -24,8 +24,12 @@
 
 // Header
 #header {
-  background-image: url("../img/header_bg.png");
+  background-image: url("../img/header_bg-small.png");
   
+  @include breakpoint($bp2, min, width) { background-image: url("../img/header_bg-medium.png"); }
+  @include breakpoint($bp4, min, width) { background-image: url("../img/header_bg-large.png"); }
+  @include breakpoint($bp5, min, width) { background-image: url("../img/header_bg-extralarge.png"); }
+  @include breakpoint($bp6, min, width) { background-image: url("../img/header_bg.png"); }
   
   &, .logo {
     background-repeat: no-repeat;

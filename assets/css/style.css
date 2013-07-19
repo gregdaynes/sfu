@@ -1381,9 +1381,25 @@ body:after {
   @media (min-width: 86.375em) {
     body:after {
       content: 'bp6'; } }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    body:after {
+      /* Retina-specific stuff here */
+      content: 'retina'; } }
 
 #header {
-  background-image: url("../img/header_bg.png"); }
+  background-image: url("../img/header_bg-small.png"); }
+  @media (min-width: 30em) {
+    #header {
+      background-image: url("../img/header_bg-medium.png"); } }
+  @media (min-width: 48em) {
+    #header {
+      background-image: url("../img/header_bg-large.png"); } }
+  @media (min-width: 62em) {
+    #header {
+      background-image: url("../img/header_bg-extralarge.png"); } }
+  @media (min-width: 86.375em) {
+    #header {
+      background-image: url("../img/header_bg.png"); } }
   #header, #header .logo {
     background-repeat: no-repeat;
     background-position: center center; }
