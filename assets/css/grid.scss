@@ -1,0 +1,70 @@
+$breakpoints: (
+  'bp2' '(min-width: '+$bp2+')',
+  'bp3' '(min-width: '+$bp3+')',
+  'bp4' '(min-width: '+$bp4+')',
+  'bp5' '(min-width: '+$bp5+')',
+  'bp6' '(min-width: '+$bp6+')'
+)!default;
+
+$breakpoint-widths: ('bp2', 'bp3', 'bp4', 'bp5', 'bp6')!default;
+$class-type: unquote("%");
+
+@mixin grid-media-query($media-query){
+  $breakpoint-found: false;
+
+  @each $breakpoint in $breakpoints{
+    $name: nth($breakpoint, 1);
+    $declaration: nth($breakpoint, 2);
+
+    @if $media-query == $name and $declaration{
+      $breakpoint-found: true;
+
+      @media only screen and #{$declaration}{
+        @content;
+      }
+    }
+  }
+
+  @if $breakpoint-found == false{
+    @warn "Breakpoint ‘#{$media-query}’ does not exist"
+  }
+}
+
+
+#{$class-type}grid{
+  list-style:none;
+  @extend %zero;
+  margin-left:-$gutter;
+}
+
+#{$class-type}grid__item{
+  display:inline-block;           /* [1] */
+  padding-left:$gutter;           /* [2] */
+  vertical-align:top;             /* [3] */
+  width:100%;                     /* [4] */
+  @extend %box-sizing;
+}
+
+
+@mixin device-type($namespace:""){
+    
+    #{$class-type}#{$namespace}whole         { width: 100% }
+    
+    #{$class-type}#{$namespace}half          { width:50%; }
+
+    #{$class-type}#{$namespace}third         { width:33.333%; }
+    #{$class-type}#{$namespace}two-thirds        { width:66.666%; }
+
+    #{$class-type}#{$namespace}quarter       { width:25%; }
+    #{$class-type}#{$namespace}three-quarters    { width:75%; }
+
+
+}
+
+@include device-type();
+
+@each $name in $breakpoint-widths {
+  @include grid-media-query($name) {
+    @include device-type('#{$name}--');
+  }
+}

@@ -1,0 +1,139 @@
+.handler, .handler-icon {
+  display: none;
+}
+
+
+.nav {
+  background-color: $secondarycolor;
+  
+  
+  h2 {
+    @include hide(hide-screen);
+  }
+  
+  ul {
+    list-style: none;
+    @extend %zero;
+    
+    li {
+      display: inline;
+      
+      @include breakpoint($bp3, max-width) {
+        display: inherit;        
+      }
+    }
+    
+    a {
+      display: block;
+      text-decoration: none;
+      color: $white;
+      border-bottom: 1px solid darken($secondarycolor, 5);
+      border-top: 1px solid lighten($secondarycolor, 5);
+      -webkit-transition: padding $transitionSpeed ease-in-out;
+         -moz-transition: padding $transitionSpeed ease-in-out;
+           -o-transition: padding $transitionSpeed ease-in-out;
+              transition: padding $transitionSpeed ease-in-out;
+      padding-left: 5px;
+      @include font-size(24);
+            
+      
+      &:hover {
+        background-color: lighten($secondarycolor, 5);
+        padding-left: 10px;
+      }
+      
+      &:active {
+        background-color: darken($secondarycolor, 5);
+        border-top-color: darken($secondarycolor, 5);
+        
+      }
+    }
+  }
+}
+
+@include breakpoint($bp3, min-width) {
+  .nav {
+    .container {
+
+    }
+    
+    ul {
+      display: table;
+      width: 100%;
+      
+      li {
+        display: table-cell;
+        width: 1%;
+        float: none;
+        
+        a {
+          padding: 10px 0 0 0;
+          white-space: nowrap;
+          text-align: center;
+          @include font-size(18);
+          
+          &:hover {
+            padding-left: 0;
+          }
+          
+          i {
+            display: block;
+            width: 100%;
+          }  
+        }  
+      }
+    }
+  }
+}
+
+@include breakpoint($bp3, max-width) {
+  .nav {
+    position: fixed;
+    top: 0;
+    left: -$navMenuWidth;
+    bottom: 0;
+    width: $navMenuWidth;
+    z-index: 1;
+    overflow: hidden;
+    border-right: 1px solid darken($secondarycolor, 5);
+  }
+
+  .nav,
+  .handler-icon {
+    -webkit-transition: left $transitionSpeed ease-in-out;
+       -moz-transition: left $transitionSpeed ease-in-out;
+  }
+  
+  .handler-icon {
+    position: absolute;
+    display: inline;
+    text-align: center;
+    z-index: 1;
+    background-color: $secondarycolor;
+    border: 1px solid darken($secondarycolor, 5);
+    border-top: none;
+    border-left-color: lighten($secondarycolor, 5);
+    
+    i {
+      display: block;
+      width: 26px;
+      height: 26px;
+            
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+    
+  .handler {    
+    &#handler:checked {
+      & ~ #nav {
+        left: 0;
+      }
+      
+      & ~ .wrapper .handler-icon {
+        left:  $navMenuWidth;
+      }
+    }
+  }
+}

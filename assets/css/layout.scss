@@ -1,0 +1,71 @@
+/*----------------------------------------------------------------------------*\
+  Layout
+\*----------------------------------------------------------------------------*/
+
+.l-header {
+  height: 225px;
+
+  .header__title {
+    @extend %hide-screen;
+  }
+  
+  @include breakpoint($bp3, min, width) {
+    height: 300px;
+  }
+}
+
+
+
+
+
+.l-colophon {
+  color: $lightneutralcolor;
+  background-color: $lighterneutralcolor;
+  padding: 0 20px;
+  @extend %grid;
+  
+  .colophon__about,
+  .colophon__contact {
+    @extend %grid__item;
+    @extend %bp2--half;
+  }
+   
+  .colophon__title {
+    @extend %hide-screen;
+  }
+}
+
+
+
+
+
+.l-footer {
+  color: $neutralcolor;
+  padding: 0 20px;
+  background-color: $lightneutralcolor;
+  text-align: center;
+  @include font-size(12);
+ 
+  
+  .footer__menu {
+    list-style: none;
+    @extend %zero;
+    
+    li {
+      display: inline;
+    }
+  }
+  
+  a {
+    color: $darkneutralcolor;
+    text-decoration: none;
+  }
+  
+  .copyright {
+    @extend %zero;
+  }
+  
+  .footer__title {
+    @extend %hide-screen;
+  }
+}

@@ -1,0 +1,48 @@
+
+.post {
+  margin: 20px 20px 0;
+  @extend %clearfix;
+}
+
+.post__image {
+  img {
+    width: 100%;
+    max-width:100%;
+    max-height:100%;
+  }
+}
+ 
+ 
+.post__header {
+  @extend %clearfix;
+}
+
+.post__header__title {
+  h1 {
+    font-weight: 600;
+    @extend %zero;
+    @include font-size(24);
+  }
+  
+  h3 {
+    font-weight: 200;
+    @include font-size(18);
+    @extend %zero;
+  }
+}
+
+.post__details {
+  border-bottom: 1px solid $lightestneutralcolor;
+  @extend %grid;
+  
+  li {
+    @extend %grid__item;
+    @extend %bp2--half;
+    @include font-size(12);
+  }
+  
+  li, li a {
+    color: $lightneutralcolor;
+    text-decoration: none;
+  }
+}
