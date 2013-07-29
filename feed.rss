@@ -14,7 +14,7 @@ description: The Search For Us RSS Feed
   
   {% for cat in site.categories %}
     {% for item in cat[1] limit:40 %}
-      {% include rss-item.xml %}
+      {% include document/rss-item.xml %}
     {% endfor %}    
   {% endfor %}
   

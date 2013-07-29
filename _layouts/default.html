@@ -1,9 +1,9 @@
 ---
 ---
-{% include partials/doctype.html %}
-{% include partials/license.html %}
-{% include partials/conditional.html %}
-{% include partials/head.html %}
+{% include document/doctype.html %}
+{% include document/license.html %}
+{% include document/conditional.html %}
+{% include document/head.html %}
 
 <body class="{{page.body-class}}">
 
@@ -11,10 +11,10 @@
   
   <div class="wrapper">
     <label for="handler" class="handler-icon" href="#"><i class="icon-expand-light"></i></label>
-    {% include layout-elements/header.html %}
+    {% include layout/header.html %}
   </div>
   
-  {% include layout-elements/nav.html %}
+  {% include layout/nav.html %}
   
   <div class="wrapper">
     
@@ -22,13 +22,11 @@
       {{content}}
     </main>
     
-    {% include subscribe.html %}
+    {% include module/subscribe.html %}
+      
+    {% include layout/footer.html %}
     
-    {% include layout-elements/colophon.html %}
-  
-    {% include layout-elements/footer.html %}
+    {% include document/scripts.html %}
     
-    {% include scripts.html %}
-    
-    {% include analytics.html %}
+    {% include document/analytics.html %}
   </div>

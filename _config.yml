@@ -21,6 +21,7 @@ license:      v2.0. http://www.apache.org/licenses/LICENSE-2.0
 
 name:         The Search For Us
 name_short:   SFU
+name_safe:    the-search-for-us
 tagline:      That others may live.
 color:        #D83434
 email:        gregdaynes@gmail.com

@@ -10,12 +10,6 @@ excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodale
 author: Gregory Daynes
 twitter: gregdaynes
 
-ratingQuality: na
-ratingDesign: 2
-ratingCost: 3
-ratingUse: 4
-ratingGeneral: 5
-
 rating:
   - na
   - 2
