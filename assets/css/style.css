@@ -23,7 +23,8 @@
 /*--------------------*\
   Colors
 \*--------------------*/
-.l-colophon, .post__details, fieldset, .l-footer .footer__menu, .l-footer .copyright, .post__header__title h1, .post__header__title h3 {
+.l-colophon, .article__details, fieldset, .l-footer .footer__menu, .l-footer .copyright, .article__header .article_title, .article__header .article_subheader, .article-list, .article-list > li article header h1, .article-list > li article header h3, .article-list > li article ul, .gallery_list, #header .logo h1,
+#header .logo h2 {
   /*--------------------*\
     Malarky/Rock-Hammer
     
@@ -34,7 +35,7 @@
   margin: 0;
   padding: 0; }
 
-.post, .post__header {
+.article, .article__header, .article-list > li article {
   /*--------------------*\
     For modern browsers
     1. The space content is one way to avoid an Opera bug when the
@@ -44,16 +45,16 @@
     2. The use of `table` rather than `block` is only necessary if using
        `:before` to contain the top-margins of child elements.
   \*--------------------*/ }
-  .post:before, .post__header:before, .post:after, .post__header:after {
+  .article:before, .article__header:before, .article-list > li article:before, .article:after, .article__header:after, .article-list > li article:after {
     content: " ";
     /* 1 */
     display: table;
     /* 2 */ }
-  .post:after, .post__header:after {
+  .article:after, .article__header:after, .article-list > li article:after {
     clear: both; }
 
 .l-colophon .colophon__about,
-.l-colophon .colophon__contact, .post__details li, input[type="checkbox"],
+.l-colophon .colophon__contact, .article__details li, input[type="checkbox"],
 input[type="radio"] {
   /*--------------------*\
     CSS3Please.com + Everyone
@@ -82,12 +83,12 @@ input[type="radio"] {
   padding: 0;
   border: 0; }
 
-.l-colophon, .post__details {
+.l-colophon, .article__details {
   list-style: none;
   margin-left: -24px; }
 
 .l-colophon .colophon__about,
-.l-colophon .colophon__contact, .post__details li {
+.l-colophon .colophon__contact, .article__details li {
   display: inline-block;
   /* [1] */
   padding-left: 24px;
@@ -99,7 +100,7 @@ input[type="radio"] {
 
 @media only screen and (min-width: 30em) {
   .l-colophon .colophon__about,
-  .l-colophon .colophon__contact, .post__details li {
+  .l-colophon .colophon__contact, .article__details li {
     width: 50%; } }
 /*--------------------*\
   Styles
@@ -590,15 +591,15 @@ th {
 /*----------------------------------------------------------------------------*\
   Modules
 \*----------------------------------------------------------------------------*/
-.post {
+.article {
   margin: 20px 20px 0; }
 
-.post__image img {
+.article__image img {
   width: 100%;
   max-width: 100%;
   max-height: 100%; }
 
-.post__header__title h1 {
+.article__header .article_title {
   font-weight: 600;
   /*--------------------*\
     rem for browsers with support
@@ -609,7 +610,7 @@ th {
   font-size: 24px;
   font-size: 2.4rem;
   line-height: 1.6; }
-.post__header__title h3 {
+.article__header .article_subheader {
   font-weight: 200;
   /*--------------------*\
     rem for browsers with support
@@ -621,9 +622,9 @@ th {
   font-size: 1.8rem;
   line-height: 1.6; }
 
-.post__details {
+.article__details {
   border-bottom: 1px solid #f6f5f5; }
-  .post__details li {
+  .article__details li {
     /*--------------------*\
       rem for browsers with support
       px for ones without
@@ -633,13 +634,249 @@ th {
     font-size: 12px;
     font-size: 1.2rem;
     line-height: 1.6; }
-  .post__details li, .post__details li a {
+  .article__details li, .article__details li a {
     color: #8a7b7b;
     text-decoration: none; }
 
-/*@import "modules/_module-articles";*/
-/*@import "modules/_module-button";*/
-/* @import "modules/_module-gallery"; */
+.article-list {
+  list-style: none; }
+  .article-list > li {
+    /*--------------------*\
+      Malarky/Rock-Hammer
+      
+      @include breakpoint(UNIT, QUERY PART LEFT, QUERY PART RIGHT, TARGET)
+    \*--------------------*/ }
+    .article-list > li:after {
+      border-bottom: 1px dotted #c6bfbf;
+      content: '';
+      display: block;
+      padding-top: 10px; }
+    .article-list > li:last-of-type:after {
+      border: none; }
+    @media width and (min: 48em) {
+      .article-list > li:nth-of-type(2n) .image-wrapper {
+        float: right;
+        margin-left: 20px; } }
+    .article-list > li article {
+      margin: 20px 20px 0; }
+      .article-list > li article .icon-stack {
+        margin: -16px 0 0 -16px; }
+      .article-list > li article .image-wrapper {
+        margin-bottom: 4px;
+        /*--------------------*\
+          Malarky/Rock-Hammer
+          
+          @include breakpoint(UNIT, QUERY PART LEFT, QUERY PART RIGHT, TARGET)
+        \*--------------------*/ }
+      .article-list > li article img {
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%; }
+      .article-list > li article header h1 {
+        /*--------------------*\
+          rem for browsers with support
+          px for ones without
+          
+          @include font-size(integer)
+        \*--------------------*/
+        font-size: 24px;
+        font-size: 2.4rem;
+        line-height: 1.6;
+        font-weight: 400; }
+      .article-list > li article header h3 {
+        /*--------------------*\
+          rem for browsers with support
+          px for ones without
+          
+          @include font-size(integer)
+        \*--------------------*/
+        font-size: 18px;
+        font-size: 1.8rem;
+        line-height: 1.6;
+        font-weight: 200; }
+      .article-list > li article ul {
+        list-style: none; }
+        .article-list > li article ul li {
+          display: inline;
+          color: #8a7b7b;
+          /*--------------------*\
+            rem for browsers with support
+            px for ones without
+            
+            @include font-size(integer)
+          \*--------------------*/
+          font-size: 12px;
+          font-size: 1.2rem;
+          line-height: 1.6; }
+          .article-list > li article ul li a {
+            color: #8a7b7b;
+            text-decoration: none; }
+
+[class^="btn-"],
+[class*=" btn-"] {
+  text-decoration: none;
+  float: right;
+  margin: 10px 0 0 10px;
+  color: white;
+  background-color: #929a00;
+  padding: 2px 10px;
+  line-height: 1;
+  border-top: 1px solid #aab300;
+  border-bottom: 1px solid #838b00;
+  border-radius: 2px;
+  /*--------------------*\
+    rem for browsers with support
+    px for ones without
+    
+    @include font-size(integer)
+  \*--------------------*/
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  /*--------------------*\
+    Malarky/Rock-Hammer
+    
+    @include box-shadow(horizontal vertical blur color)
+  \*--------------------*/
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  /*--------------------*\
+    CSS3 Please
+    
+    @include linear-gradient(#000, #fff);
+  \*--------------------*/
+  background-color: #9ca400;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#9ca400), to(#8d9500));
+  background-image: -webkit-linear-gradient(top, #9ca400, #8d9500);
+  background-image: -moz-linear-gradient(top, #9ca400, #8d9500);
+  background-image: -o-linear-gradient(top, #9ca400, #8d9500);
+  background-image: linear-gradient(to bottom, #9ca400, #8d9500); }
+  [class^="btn-"]:hover,
+  [class*=" btn-"]:hover {
+    cursor: pointer; }
+  [class^="btn-"]:active,
+  [class*=" btn-"]:active {
+    border-top-color: #838b00;
+    border-bottom: 1px solid transparent;
+    /*--------------------*\
+      Malarky/Rock-Hammer
+      
+      @include box-shadow(horizontal vertical blur color)
+    \*--------------------*/
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    background-image: none; }
+  [class^="btn-"] i,
+  [class*=" btn-"] i {
+    position: relative;
+    display: inline-block;
+    top: 3px; }
+
+.btn-action {
+  border-top-color: #cddfe6;
+  border-bottom-color: #b2cdd9;
+  /*--------------------*\
+    CSS3 Please
+    
+    @include linear-gradient(#000, #fff);
+  \*--------------------*/
+  background-color: #c3d8e1;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#c3d8e1), to(#b9d2dc));
+  background-image: -webkit-linear-gradient(top, #c3d8e1, #b9d2dc);
+  background-image: -moz-linear-gradient(top, #c3d8e1, #b9d2dc);
+  background-image: -o-linear-gradient(top, #c3d8e1, #b9d2dc);
+  background-image: linear-gradient(to bottom, #c3d8e1, #b9d2dc); }
+  .btn-action:active {
+    border-top-color: #b2cdd9;
+    /*--------------------*\
+      Malarky/Rock-Hammer
+      
+      @include box-shadow(horizontal vertical blur color)
+    \*--------------------*/
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    background-image: none; }
+
+.gallery_list {
+  list-style: none; }
+
+.gallery__item {
+  display: inline-block;
+  border: 1px solid #c6bfbf;
+  width: 33%;
+  margin-right: 0.333333%;
+  padding: 1px; }
+  .gallery__item:last-of-type {
+    margin-right: 0; }
+  .gallery__item div {
+    display: inline-block; }
+    .gallery__item div img {
+      margin-bottom: 1px;
+      width: 100%; }
+    .gallery__item div h3 {
+      /*--------------------*\
+        based on Malarky/Rock-Hammer
+        hide elements based on requirement
+        
+        @include hide(option)
+      \*--------------------*/
+      /*@if $type == hide-screen
+      {
+        overflow: hidden;
+        position: absolute;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        width: 1px;
+        margin: -1px;
+        padding: 0;
+        border: 0;
+        
+        &.focusable {
+          &:active,
+          &:focus {
+            position: static;
+            clip: auto;
+            height: auto;
+            width: auto;
+            margin: 0;
+            overflow: visible;
+          } 
+        }
+      }*/ }
+    .gallery__item div p {
+      /*--------------------*\
+        based on Malarky/Rock-Hammer
+        hide elements based on requirement
+        
+        @include hide(option)
+      \*--------------------*/
+      /*@if $type == hide-screen
+      {
+        overflow: hidden;
+        position: absolute;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        width: 1px;
+        margin: -1px;
+        padding: 0;
+        border: 0;
+        
+        &.focusable {
+          &:active,
+          &:focus {
+            position: static;
+            clip: auto;
+            height: auto;
+            width: auto;
+            margin: 0;
+            overflow: visible;
+          } 
+        }
+      }*/ }
+
 [class^="icon-"],
 [class*=" icon-"] {
   display: inline-block;
@@ -672,10 +909,185 @@ th {
     position: absolute;
     z-index: 1; }
 
-/*@import "modules/_module-modal";*/
+.gallery ul li div .modal-content .label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+  .gallery ul li div .modal-content .label h3, .gallery ul li div .modal-content .label p {
+    /*--------------------*\
+      based on Malarky/Rock-Hammer
+      hide elements based on requirement
+      
+      @include hide(option)
+    \*--------------------*/
+    /*@if $type == hide-screen
+    {
+      overflow: hidden;
+      position: absolute;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      width: 1px;
+      margin: -1px;
+      padding: 0;
+      border: 0;
+      
+      &.focusable {
+        &:active,
+        &:focus {
+          position: static;
+          clip: auto;
+          height: auto;
+          width: auto;
+          margin: 0;
+          overflow: visible;
+        } 
+      }
+    }*/ }
+
 /*@import "modules/_module-navigation";*/
 /*@import "modules/_module-rating";*/
 /*@import "modules/_module-subscribe";*/
+#header {
+  background-image: url("../img/header_bg-small.png");
+  /*--------------------*\
+    Malarky/Rock-Hammer
+    
+    @include breakpoint(UNIT, QUERY PART LEFT, QUERY PART RIGHT, TARGET)
+  \*--------------------*/
+  /*--------------------*\
+    Malarky/Rock-Hammer
+    
+    @include breakpoint(UNIT, QUERY PART LEFT, QUERY PART RIGHT, TARGET)
+  \*--------------------*/
+  /*--------------------*\
+    Malarky/Rock-Hammer
+    
+    @include breakpoint(UNIT, QUERY PART LEFT, QUERY PART RIGHT, TARGET)
+  \*--------------------*/
+  /*--------------------*\
+    Malarky/Rock-Hammer
+    
+    @include breakpoint(UNIT, QUERY PART LEFT, QUERY PART RIGHT, TARGET)
+  \*--------------------*/ }
+  @media width and (min: 30em) {
+    #header {
+      background-image: url("../img/header_bg-medium.png"); } }
+  @media width and (min: 48em) {
+    #header {
+      background-image: url("../img/header_bg-large.png"); } }
+  @media width and (min: 62em) {
+    #header {
+      background-image: url("../img/header_bg-extralarge.png"); } }
+  @media width and (min: 86.375em) {
+    #header {
+      background-image: url("../img/header_bg.png"); } }
+  #header, #header .logo {
+    background-repeat: no-repeat;
+    background-position: center center; }
+  #header .logo {
+    background-image: url("../img/header_logo.png");
+    height: 100%;
+    /*--------------------*\
+      based on Malarky/Rock-Hammer
+      hide elements based on requirement
+      
+      @include hide(option)
+    \*--------------------*/
+    /*@if $type == hide-screen
+    {
+      overflow: hidden;
+      position: absolute;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      width: 1px;
+      margin: -1px;
+      padding: 0;
+      border: 0;
+      
+      &.focusable {
+        &:active,
+        &:focus {
+          position: static;
+          clip: auto;
+          height: auto;
+          width: auto;
+          margin: 0;
+          overflow: visible;
+        } 
+      }
+    }*/
+    /*--------------------*\
+      Malarky/Rock-Hammer
+      
+      @include breakpoint(UNIT, QUERY PART LEFT, QUERY PART RIGHT, TARGET)
+    \*--------------------*/ }
+    @media width and (max: 37.5em) {
+      #header .logo {
+        /*--------------------*\
+          Malarky/Rock-Hammer
+          
+          @include background-size( auto | % | px )
+        \*--------------------*/
+        -webkit-background-size: 320px auto;
+        -moz-background-size: 320px auto;
+        -o-background-size: 320px auto;
+        background-size: 320px auto; } }
+
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important; }
+
+  a,
+  a:visited {
+    text-decoration: underline; }
+
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+
+  /*
+   * Don't show links for images, or javascript/internal links
+   */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: ""; }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */ }
+
+  tr,
+  img {
+    page-break-inside: avoid; }
+
+  img {
+    max-width: 100% !important; }
+
+  @page {
+    margin: 0.5cm; }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+
+  h2,
+  h3 {
+    page-break-after: avoid; } }
 /*--------------------*\
   add box to screen displaying current breakpoint  
 \*--------------------*/

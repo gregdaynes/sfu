@@ -1,42 +1,41 @@
 .gallery {
 
-  h2 {
+}
+
+.gallery__header {
+
+}
   
+.gallery_list {
+  list-style: none;
+  @extend %zero;
+}
+
+.gallery__item {
+  display: inline-block;
+  border: 1px solid $lighterneutralcolor;
+  width: 33%;
+  margin-right: 0.333333%;
+  padding: 1px;
+  
+  &:last-of-type {
+    margin-right: 0;
   }
   
-  ul {
-    list-style: none;
-    @extend %zero;
+  div {
+    display: inline-block;
     
-    li {
-      display: inline-block;
-      border: 1px solid $lighterneutralcolor;
-      width: 33%;
-      margin-right: 0.333333%;
-      padding: 1px;
-      
-      &:last-of-type {
-        margin-right: 0;
-      }
-      
-      div {
-        display: inline-block;
-        
-        a {
-          img {
-            margin-bottom: 1px;
-            width: 100%;
-          }
-        }
-        
-        h3 {
-          @include hide(hidden);
-        }
-        
-        p {
-          @include hide(hidden);
-        }
-      }
+    img {
+      margin-bottom: 1px;
+      width: 100%;
+    }
+    
+    h3 {
+      @include hide(hidden);
+    }
+    
+    p {
+      @include hide(hidden);
     }
   }
 }

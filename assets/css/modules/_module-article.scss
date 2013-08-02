@@ -1,10 +1,10 @@
 
-.post {
+.article {
   margin: 20px 20px 0;
   @extend %clearfix;
 }
 
-.post__image {
+.article__image {
   img {
     width: 100%;
     max-width:100%;
@@ -13,25 +13,24 @@
 }
  
  
-.post__header {
+.article__header {
   @extend %clearfix;
-}
-
-.post__header__title {
-  h1 {
+  
+  .article_title {
     font-weight: 600;
     @extend %zero;
     @include font-size(24);
   }
   
-  h3 {
+  .article_subheader {
     font-weight: 200;
     @include font-size(18);
     @extend %zero;
   }
 }
 
-.post__details {
+
+.article__details {
   border-bottom: 1px solid $lightestneutralcolor;
   @extend %grid;
   

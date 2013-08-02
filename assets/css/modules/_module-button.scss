@@ -13,7 +13,7 @@
   
   @include font-size(14);
   @include box-shadow();
-  /*@include linear-gradient(lighten($linkcolor, 2), darken($linkcolor, 1));*/
+  @include linear-gradient(lighten($linkcolor, 2), darken($linkcolor, 1));
   
   &:hover {
     cursor: pointer; 
@@ -36,7 +36,7 @@
 .btn-action {
   border-top-color: lighten($successcolor, 5);
   border-bottom-color: darken($successcolor, 3);
-  /*@include linear-gradient(lighten($successcolor, 2), darken($successcolor, 1));*/
+  @include linear-gradient(lighten($successcolor, 2), darken($successcolor, 1));
   
   &:active {
     border-top-color: darken($successcolor, 3);

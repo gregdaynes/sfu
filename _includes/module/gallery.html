@@ -1,13 +1,13 @@
-<section class="gallery">
+<div class="gallery">
   <h2 class="gallery__header">Gallery</h2>
   
   <ul class="gallery__list">
   {% for pic in page.pictures %}
-    <li>
+    <li class="gallery__item">
       <div>
-        {% include modal.html %}
+        {% include module/modal.html %}
       </div>
     </li>
   {% endfor %}
   </ul>
-</section>
+</div>

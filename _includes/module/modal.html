@@ -1,5 +1,5 @@
 <a href="#{{pic.filename}}" class="modal-call">
-  {% include picture.html %}
+  {% include partial/picture.html %}
   <h3>{{ pic.label }}</h3>
   <p>{{ pic.caption }}</p>
 </a>
@@ -8,7 +8,7 @@
 <section class="modal-content" id="{{pic.filename}}" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
 
 	<div class="modal-inner">    
-		{% include picture.html %}
+		{% include partial/picture.html %}
     
     <div class="label">
 			<h3>{{ pic.label }}</h3>

@@ -107,6 +107,24 @@
 
 
 
+@mixin linear-gradient($start, $stop)
+{
+  /*--------------------*\
+    CSS3 Please
+    
+    @include linear-gradient(#000, #fff);
+  \*--------------------*/
+  background-color: $start;
+  background-image: -webkit-gradient(linear, left top, left bottom, from($start), to($stop));
+  background-image: -webkit-linear-gradient(top, $start, $stop);
+  background-image:    -moz-linear-gradient(top, $start, $stop);
+  background-image:      -o-linear-gradient(top, $start, $stop);
+  background-image:         linear-gradient(to bottom, $start, $stop);
+}
+
+
+
+
 
 @mixin box-shadow($shadow: 0 1px 3px rgba(0,0,0,.25)) {
   /*--------------------*\

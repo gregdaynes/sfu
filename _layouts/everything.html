@@ -3,43 +3,39 @@ layout: default
 body-class: list
 ---
 
-  <ul class="article-list">
-    {% for item in site.posts %}
-      {% if item.type != "static" %}
-        <li>
-          <article>          
-            <div class="image-wrapper">
-              <span class="icon icon-stack">
-                <i class="icon-circle icon-base icon-dark"></i>
-                <i class="icon-category icon-{{item.category}}-light"></i>
-              </span>
-              
-              <div class="lead-image"> 
-                {% for pic in item.leadImage %}
-                  {% include partial/picture.html %}
-                {% endfor %}
-              </div>
-              
+<ul class="article-list">
+  {% for item in site.posts %}
+    {% if item.type != "static" %}
+      <li class="content-list__item">
+        <article class="content-list__article article">
+          
+          <div class="article__image">
+            <span class="article__icon--stack">
+              <i class="article__icon--dark article__icon--base"></i>
+              <i class="article__icon--{{item.category}} article__icon--light"></i>
+            </span>
+            
+            <div class="lead-image">            
+              {% for pic in item.leadImage %}
+                {% include partial/picture.html %}
+              {% endfor %}
             </div>
+          </div>
+          
+          <header class="article__header">
+            <h1 class="article__title">{{item.title}}</h1>
+            <em class="article__subheader">{{item.company}}</em>
             
-            <header>
-              <hgroup>
-                <h1>{{item.leadImage[filename]}} {{item.title}}</h1>
-                <h3>{{item.company}}</h3>
-              </hgroup>
-              
-              <ul>
-                <li><a href="http://twitter.com/{{item.twitter}}">{{item.author}}</a></li>
-                <li>{{ item.date | date: "%d %B %Y" }}</li>
-              </ul>
-            </header>
-            
-            <p>{{item.excerpt}} <a class="btn-primary" href="{{item.url}}">Read More</a></p>
-            
-          </article>
-        </li>
-      {% endif %}
-    {% endfor %}
-  </ul>
-
-
+            <ul class="article__details">
+              <li class="article__author--twitter"><a href="http://twitter.com/{{item.twitter}}">{{item.author}}</a></li>
+              <li class="article__date">{{ item.date | date: "%d %B %Y" }}</li>
+            </ul>
+          </header>
+          
+          <p>{{item.excerpt}} <a class="btn-primary" href="{{item.url}}">Read More</a></p>
+          
+        </article>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>

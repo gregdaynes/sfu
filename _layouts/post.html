@@ -2,30 +2,36 @@
 layout: default
 ---
 
-<article class="post">
-  <i class="{{page.category}} post__category"></i>
+
+<article class="article">
+
+  <span class="article__icon--stack">
+    <i class="article__icon--dark article__icon--base"></i>
+    <i class="article__icon--{{item.category}} article__icon--light"></i>
+  </span>
   
-  <div class="lead-image post__image">  
-  {% for pic in page.leadImage %}
-    {% include partial/picture.html %}
-  {% endfor %}
+  <div class="article__image">
+    <div class="lead-image">            
+      {% for pic in page.leadImage %}
+        {% include partial/picture.html %}
+      {% endfor %}
+    </div>
   </div>
   
-  <header class="post__header">
-    <hgroup class="post__title">
-      <h1>{{page.title}}</h1>
-      <h3>{{page.company}}</h3>
-    </hgroup>
+  <header class="article__header">
+    <h1 class="article__title">{{page.title}}</h1>
+    <em class="article__subheader">{{page.company}}</em>
     
-    <ul class="post__details">
-      <li class="post__details__author"><a href="http://twitter.com/{{page.twitter}}">{{page.author}}</a></li><!--
-   --><li class="post__details__date">{{ page.date | date: "%d %B %Y" }}</li>
+    <ul class="article__details">
+      <li class="article__author--twitter"><a href="http://twitter.com/{{item.twitter}}">{{page.author}}</a></li><!--
+   --><li class="article__date">{{ page.date | date: "%d %B %Y" }}</li>
     </ul>
   </header>
   
   {{ content }}
   
-  {% include rating.html %}
+  {% include module/rating.html %}
     
-  {% include gallery.html %}
+  {% include module/gallery.html %}
+  
 </article>

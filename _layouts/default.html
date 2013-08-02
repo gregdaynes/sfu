@@ -7,26 +7,23 @@
 
 <body class="{{page.body-class}}">
 
-  <input type="checkbox" name="handler" class="handler" id="handler" onclick="null" />
+  <input type="checkbox" name="handler" class="nav-input" onclick="null" />
   
-  <div class="wrapper">
-    <label for="handler" class="handler-icon" href="#"><i class="icon-expand-light"></i></label>
-    {% include layout/header.html %}
-  </div>
+  <label for="handler" class="nav-input__icon" href="#">
+    <i class="nav-input__icon-light"></i>
+  </label>
+  
+  {% include layout/header.html %}
   
   {% include layout/nav.html %}
   
-  <div class="wrapper">
     
-    <main>
-      {{content}}
-    </main>
+  {{content}}
+  
+  {% include module/subscribe.html %}
     
-    {% include module/subscribe.html %}
-      
-    {% include layout/footer.html %}
-    
-    {% include document/scripts.html %}
-    
-    {% include document/analytics.html %}
-  </div>
+  {% include layout/footer.html %}
+  
+  {% include document/scripts.html %}
+  
+  {% include document/analytics.html %}
