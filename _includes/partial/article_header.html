@@ -1,0 +1,24 @@
+{% if item != null %}
+  {% capture itemTitle %}{{item.title}} {% endcapture %}
+  {% capture itemCompany %}{{ item.company}} {% endcapture %}
+  {% capture itemTwitter %}{{ item.twitter}} {% endcapture %}
+  {% capture itemAuthor %}{{ item.author}} {% endcapture %}
+  {% capture itemDate %}{{item.date}} {% endcapture %}
+{% else if page != null %}
+  {% capture itemTitle %}{{page.title}} {% endcapture %}
+  {% capture itemCompany %}{{ page.company}} {% endcapture %}
+  {% capture itemTwitter %}{{ page.twitter}} {% endcapture %}
+  {% capture itemAuthor %}{{ page.author}} {% endcapture %}
+  {% capture itemDate %}{{page.date}} {% endcapture %}
+{% endif %}
+
+
+<header class="article__header">
+  <h1 class="article__title">{{itemTitle}}</h1>
+  <em class="article__subheader">{{itemCompany}}</em>
+  
+  <ul class="article__details">
+    <li class="article__author--twitter"><a href="http://twitter.com/{{itemTwitter}}">{{itemAuthor}}</a></li><!--
+ --><li class="article__date">{{ itemDate | date: "%d %B %Y" }}</li>
+  </ul>
+</header>

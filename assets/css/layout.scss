@@ -9,7 +9,7 @@
     @extend %hide-screen;
   }
   
-  @include breakpoint($bp3, min, width) {
+  @include breakpoint($bp3, min-width) {
     height: 300px;
   }
 }
@@ -46,6 +46,9 @@
   text-align: center;
   @include font-size(12);
  
+  .footer__header {
+    @extend %hide-screen;
+  }
   
   .footer__menu {
     list-style: none;
@@ -63,9 +66,5 @@
   
   .copyright {
     @extend %zero;
-  }
-  
-  .footer__title {
-    @extend %hide-screen;
-  }
+  }  
 }

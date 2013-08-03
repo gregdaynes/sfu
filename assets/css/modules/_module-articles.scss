@@ -1,82 +1,26 @@
 .article-list {
   list-style: none;
   @extend %zero;
-  
-  & > li {
-    // separator
-    &:after {
-      border-bottom: 1px dotted $lighterneutralcolor;
-      content: '';
-      display: block;
-      padding-top: 10px;
-    }
-    
-    &:last-of-type:after {
-      border: none;
-    }
-    
-    @include breakpoint($bp4, min, width) {
-      &:nth-of-type(2n) {
-        .image-wrapper {
-          float: right;
-          margin-left: 20px;
-        }
-      }
-    }
-    
-    
-  
-    article {
-      margin: 20px 20px 0;
-      @extend %clearfix;
-      
-      // icons
-      .icon-stack {
-        margin: -16px 0 0 -16px;
-      }
-      
-      // image
-      .image-wrapper {
-        margin-bottom: 4px;
-        @include breakpoint($bp4, min, width) {
+}
 
-        }
-      }
-      
-      img {
-        width: 100%;
-        max-width:100%;
-        max-height:100%;
-      }
-      
-      header {
-        h1 {
-          @include font-size(24);
-          font-weight: 400;
-          @extend %zero;
-        }
-        
-        h3 {
-          @include font-size(18);
-          font-weight: 200;
-          @extend %zero;
-        }
-      }
-      
-      ul {
-        list-style: none;
-        @extend %zero;
-        
-        li {
-          display: inline;
-          color: $lightneutralcolor;
-          @include font-size(12);
-          
-          a {
-            color: $lightneutralcolor;
-            text-decoration: none;
-          }
-        }
+.article-list > li {
+  // separator
+  &:after {
+    border-bottom: 1px dotted $lighterneutralcolor;
+    content: '';
+    display: block;
+    padding-top: 10px;
+  }
+  
+  &:last-of-type:after {
+    border: none;
+  }
+  
+  @include breakpoint($bp4, min, width) {
+    &:nth-of-type(2n) {
+      .image-wrapper {
+        float: right;
+        margin-left: 20px;
       }
     }
   }

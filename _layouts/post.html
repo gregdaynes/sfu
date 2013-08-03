@@ -5,9 +5,9 @@ layout: default
 
 <article class="article">
 
-  <span class="article__icon--stack">
-    <i class="article__icon--dark article__icon--base"></i>
-    <i class="article__icon--{{item.category}} article__icon--light"></i>
+  <span class="icon icon--stack">
+    <i class="icon icon--{{page.category}} icon--category icon--light"></i>
+    <i class="icon icon--dark icon--base icon--circle"></i>
   </span>
   
   <div class="article__image">
@@ -18,15 +18,7 @@ layout: default
     </div>
   </div>
   
-  <header class="article__header">
-    <h1 class="article__title">{{page.title}}</h1>
-    <em class="article__subheader">{{page.company}}</em>
-    
-    <ul class="article__details">
-      <li class="article__author--twitter"><a href="http://twitter.com/{{item.twitter}}">{{page.author}}</a></li><!--
-   --><li class="article__date">{{ page.date | date: "%d %B %Y" }}</li>
-    </ul>
-  </header>
+  {% include partial/article_header.html %}
   
   {{ content }}
   

@@ -6,7 +6,7 @@
 
 }
   
-.gallery_list {
+.gallery__list {
   list-style: none;
   @extend %zero;
 }
@@ -30,12 +30,9 @@
       width: 100%;
     }
     
-    h3 {
-      @include hide(hidden);
-    }
-    
+    h3,    
     p {
-      @include hide(hidden);
+      @extend %hide-screen;
     }
   }
 }

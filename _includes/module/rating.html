@@ -22,8 +22,8 @@
       {% if page.rating[i] == "na" %}
         <li>Not Applicable</li>
       {% else %}
-        {% for i in (1..page.rating[i]) %}<li><i class="icon icon-star"></i></li>{% endfor %}
-        {% for n in (page.rating[i]..4) %}<li><i class="icon icon-star-empty"></i></li>{% endfor %}
+        {% for i in (1..page.rating[i]) %}<li><i class="icon icon--star"></i></li>{% endfor %}
+        {% for n in (page.rating[i]..4) %}<li><i class="icon icon--star-empty"></i></li>{% endfor %}
       {% endif %}
     {% endif %}
     </ul>

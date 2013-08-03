@@ -1,17 +1,18 @@
-.handler, .handler-icon {
+.nav-input, .nav-input__icon {
   display: none;
 }
 
 
-.nav {
+.main-site-nav {
   background-color: $secondarycolor;
+   @extend %box-sizing;
   
-  
-  h2 {
-    @include hide(hide-screen);
+  .main-site-nav__header {
+    @extend %hide-screen;
+    @extend %zero;
   }
   
-  ul {
+  .main-site-nav__menu {
     list-style: none;
     @extend %zero;
     
@@ -52,12 +53,9 @@
 }
 
 @include breakpoint($bp3, min-width) {
-  .nav {
-    .container {
-
-    }
+  .main-site-nav {
     
-    ul {
+    .main-site-nav__menu {
       display: table;
       width: 100%;
       
@@ -87,7 +85,7 @@
 }
 
 @include breakpoint($bp3, max-width) {
-  .nav {
+  .main-site-nav {
     position: fixed;
     top: 0;
     left: -$navMenuWidth;
@@ -98,13 +96,13 @@
     border-right: 1px solid darken($secondarycolor, 5);
   }
 
-  .nav,
-  .handler-icon {
+  .main-site-nav,
+  .nav-input__icon {
     -webkit-transition: left $transitionSpeed ease-in-out;
        -moz-transition: left $transitionSpeed ease-in-out;
   }
   
-  .handler-icon {
+  .nav-input__icon {
     position: absolute;
     display: inline;
     text-align: center;
@@ -125,15 +123,13 @@
     }
   }
     
-  .handler {    
-    &#handler:checked {
-      & ~ #nav {
-        left: 0;
-      }
-      
-      & ~ .wrapper .handler-icon {
-        left:  $navMenuWidth;
-      }
+  .nav-input:checked {
+    & ~ .main-site-nav {
+      left: 0;
+    }
+    
+    & ~ .nav-input__icon {
+      left:  $navMenuWidth;
     }
   }
 }

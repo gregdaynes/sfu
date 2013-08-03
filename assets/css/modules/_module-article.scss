@@ -2,6 +2,10 @@
 .article {
   margin: 20px 20px 0;
   @extend %clearfix;
+  
+  .icon--stack {
+    margin: -16px 0 0 -16px;
+  }
 }
 
 .article__image {
@@ -16,13 +20,13 @@
 .article__header {
   @extend %clearfix;
   
-  .article_title {
-    font-weight: 600;
+  .article__title {
+    font-weight: 400;
     @extend %zero;
     @include font-size(24);
   }
   
-  .article_subheader {
+  .article__subheader {
     font-weight: 200;
     @include font-size(18);
     @extend %zero;

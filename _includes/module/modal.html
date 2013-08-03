@@ -4,19 +4,17 @@
   <p>{{ pic.caption }}</p>
 </a>
 
-<!-- A modal with its content -->
-<section class="modal-content" id="{{pic.filename}}" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+<section class="semantic-content" id="{{pic.filename}}" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
 
-	<div class="modal-inner">    
-		{% include partial/picture.html %}
-    
+  <div class="modal-inner">    
+		<div class="modal-inner__image">
+  		{% include partial/picture.html %}
+		</div>
     <div class="label">
 			<h3>{{ pic.label }}</h3>
       <p>{{ pic.caption }}</p>
     </div>
 	</div>
 
-	<!-- Use Hash-Bang to maintain scroll position when closing modal -->
-	<a href="#!" class="modal-close" title="Close this modal"
-			data-dismiss="modal">&times;</a>
+  <a href="#!" class="modal-close" title="Close this modal" data-close="Close" data-dismiss="modal">×</a>
 </section>

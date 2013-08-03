@@ -1,5 +1,5 @@
 // Subscribe
-#subscribe {
+.subscribe {
   padding: 0 20px;
   color: $lighterneutralcolor;
   text-shadow: 0 -1px 0 $lightestneutralcolor;
@@ -9,13 +9,11 @@
   @include font-size(24);
   @extend %clearfix;
   
-  .container {
-  
-    p {
-    }
+  p {
+    float: right;
   }
   
-  h2 {
-    @include hide(visually);
+  .subscribe__header {
+    @extend %hide-screen;
   }
 }
