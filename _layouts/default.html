@@ -12,21 +12,20 @@
   <input type="checkbox" name="handler" id="handler" class="nav-input" onclick="null" />
   
   <label for="handler" class="nav-input__icon" href="#">
-    <i class="icon icon--expand icon--light"></i>
+    <i class="icon icon--right icon--light"></i>
   </label>
   
   
+  {% include layout/header.html %}
   
-    {% include layout/header.html %}
+  {% include layout/nav.html %}
+  
     
-    {% include layout/nav.html %}
+  {{content}}
+  
+  {% include module/subscribe.html %}
     
-      
-    {{content}}
-    
-    {% include module/subscribe.html %}
-      
-    {% include layout/footer.html %}
+  {% include layout/footer.html %}
   
   </div>
   

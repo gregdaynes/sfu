@@ -44,27 +44,46 @@
   padding: 0 20px;
   background-color: $lightneutralcolor;
   text-align: center;
-  @include font-size(12);
+/*   @include font-size(14); */
  
   .footer__header {
     @extend %hide-screen;
   }
-  
-  .footer__menu {
-    list-style: none;
-    @extend %zero;
-    
-    li {
-      display: inline;
-    }
-  }
-  
+   
   a {
     color: $darkneutralcolor;
     text-decoration: none;
   }
   
   .copyright {
+    @include font-size(12);
     @extend %zero;
+  }
+  
+  .footer__menu {
+    @include font-size(12);
+    li { margin: 0 0.5em; }
+  }
+  
+  .contact__header {
+    @include font-size(18);
+  }
+  
+  .contact__menu {
+    
+    li {
+      width: 36px;
+      height: 36px;
+      
+      .icon--base {
+        background-color: $neutralcolor;
+      }
+      
+      a:hover {
+        .icon--base {
+         background-color: $darkneutralcolor; 
+        }
+      }
+    }    
   }  
 }

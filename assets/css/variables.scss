@@ -22,16 +22,16 @@ $transitionSpeed: .3s;
 /*--------------------*\
   Colors
 \*--------------------*/
-$primarycolor 					: rgb(146,154,0);
-$secondarycolor 				: rgb(164,50,21);
-$tertiarycolor 					: rgb(41,47,54);
+$primarycolor 					: rgb(53, 66, 84);
+$secondarycolor 				: rgb(58, 79, 88);
+$tertiarycolor 					: rgb(58, 79, 88);
 
-$neutralcolor 					: rgb(71,63,63);
-$midneutralcolor 				: darken($neutralcolor,25%);
-$darkneutralcolor 			: darken($neutralcolor,50%);
-$lightneutralcolor 			: lighten($neutralcolor,25%);
-$lighterneutralcolor 		: lighten($neutralcolor,50%);
-$lightestneutralcolor 	: lighten($neutralcolor,70%);
+$neutralcolor 					: rgb(53, 66, 84);
+$midneutralcolor 				: darken($neutralcolor,10%);
+$darkneutralcolor 			: darken($neutralcolor,20%);
+$lightneutralcolor 			: lighten($neutralcolor,15%);
+$lighterneutralcolor 		: lighten($neutralcolor,20%);
+$lightestneutralcolor 	: lighten($neutralcolor,32%);
 
 $black 							: rgb(0,0,0);
 $white 							: rgb(255,255,255);

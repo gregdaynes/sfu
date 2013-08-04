@@ -2,6 +2,14 @@
   display: none;
 }
 
+.nav {
+  list-style: none;
+  @extend %zero;
+  
+  li {
+    display: inline-block;
+  }
+}
 
 .main-site-nav {
   background-color: $secondarycolor;
@@ -13,12 +21,8 @@
   }
   
   .main-site-nav__menu {
-    list-style: none;
-    @extend %zero;
     
-    li {
-      display: inline;
-      
+    li {      
       @include breakpoint($bp3, max-width) {
         display: inherit;        
       }
@@ -91,7 +95,7 @@
     left: -$navMenuWidth;
     bottom: 0;
     width: $navMenuWidth;
-    z-index: 1;
+    z-index: 3;
     overflow: hidden;
     border-right: 1px solid darken($secondarycolor, 5);
   }

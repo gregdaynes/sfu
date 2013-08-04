@@ -329,7 +329,11 @@ html {
 
 
 
-
+  .label { 
+    h3, p {
+      display: block;
+    }
+  }
 
 .modal-inner__image {
   display:block;

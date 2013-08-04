@@ -1,0 +1,12 @@
+<div class="article__image">
+  <span class="icon icon--stack">
+    <i class="icon--circle icon--dark icon--base"></i>
+    <i class="icon icon--{{item.category}} icon--category icon--light"></i>
+  </span>
+  
+  <div class="lead-image">            
+    {% for pic in item.leadImage %}
+      {% include partial/picture.html %}
+    {% endfor %}
+  </div>
+</div>

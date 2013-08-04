@@ -7,18 +7,41 @@
     <p class="contact__info">Call me on <span class="tel">+1 (250) 732  9424</span> or send a <a href="https://twitter.com/?status=@{{site.twitter}}">tweet</a> or <a href="mailto:{{site.email}}">email</a>.</p>
     
     <ul class="nav contact__menu">
-      <li><a href="https://twitter.com/@{{site.twitter}}" title="Follow {{site.name}} on Twitter" rel="me">Twitter</a></li>
-      <li><a href="{{site.url}}/feed.rss" title="{{site.name}} RSS feed">RSS</a></li>
-      <li><a href="mailto:07b2013@stuffandnonsense.co.uk"  title="Email {{site.name}}">Email</a></li>
+      <li><a href="https://twitter.com/@{{site.twitter}}" title="Follow {{site.name}} on Twitter" rel="me">
+        <span class="icon icon--stack">
+          <i class="icon--circle icon--dark icon--base"></i>
+          <i class="icon icon--twitter icon--light"></i>
+        </span>
+      </a></li>
+      
+      <li><a href="{{site.url}}/feed.rss" title="{{site.name}} RSS feed">
+        <span class="icon icon--stack">
+          <i class="icon--circle icon--dark icon--base"></i>
+          <i class="icon icon--rss icon--light"></i>
+        </span>
+      </a></li>
+            
+      <li><a href="{{site.email}}"  title="Email {{site.name}}">
+        <span class="icon--stack">
+          <i class="icon--circle icon--dark icon--base"></i>
+          <i class="icon icon--email icon--light"></i>
+        </span>
+      </a></li>
     </ul>
   </section>
   
-  
   <p class="copyright">{{site.copyright}}</p>
   
-  <ul class="footer__menu">
+  <ul class="nav footer__menu">
     <li><a href="/terms">Terms of Service</a></li>
     <li><a href="/privacy">Privacy Policy</a></li>
     <li><a href="#{{site.name_safe}}" rel="internal" title="Scroll to the top">Top</a></li>
   </ul>
 </footer>
+
+
+
+
+
+
+

@@ -5,12 +5,12 @@ layout: default
 
 <article class="article">
 
-  <span class="icon icon--stack">
-    <i class="icon icon--{{page.category}} icon--category icon--light"></i>
-    <i class="icon icon--dark icon--base icon--circle"></i>
-  </span>
-  
   <div class="article__image">
+    <span class="icon icon--stack">
+      <i class="icon icon--circle icon--dark icon--base"></i>
+      <i class="icon icon--{{page.category}} icon--category icon--light"></i>
+    </span>
+    
     <div class="lead-image">            
       {% for pic in page.leadImage %}
         {% include partial/picture.html %}

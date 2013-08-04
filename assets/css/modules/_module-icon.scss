@@ -4,26 +4,17 @@
   height: 16px;
   background-position: center center;
   background-repeat: no-repeat;
+  
 }
 
 .icon--circle { border-radius: 50%; }
-.icon--dark { background-color: $black; }
+.icon--dark { background-color: $tertiarycolor; }
 
 .icon--stack {
   width: 36px;
   height: 36px;
   display: block;
   position: absolute;
-}
-
-.icon--category {
-  z-index: 2;
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%;
-  top:0;
-  left:0;
 }
 
 .icon--base {
@@ -34,3 +25,12 @@
   z-index: 1;
 }
 
+.icon--stack .icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+  position: absolute;
+  z-index: 2;
+}
