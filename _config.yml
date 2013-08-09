@@ -3,8 +3,7 @@ markdown:  rdiscount
 safe:      true
 lsi:       false
 pygments:  true
-host:      0.0.0.0
-port:      4000
+exclude: ['node_modules', 'Gruntfile.js', 'package.json']
 
 
 # Site stuff
@@ -33,63 +32,3 @@ keywords:     list, of, keywords
 description:  description of site
 twitter:      gregdaynes
 twitter_card: summary
-
-
-###############
-# Prose stuff
-prose:
-  rooturl: '_posts'
-  siteurl: 'http://thesearchfor.us/'
-  relativeLinks: 'http://gregdaynes.github.io/sfu/links.jsonp'
-  media: '_posts/media'
-  metadata:
-    _posts:
-      - name: "category"
-        field:
-          element: "hidden"
-          value: "blog"
-      - name: "layout"
-        field:
-          element: "hidden"
-          value: "blog"
-      - name: "title"
-        field:
-          element: "text"
-          label: "Title"
-          value: ""
-      - name: "splash"
-        field:
-          element: "text"
-          label: "Splash image"
-          value: ""
-    _posts/gear:
-      - name: "category"
-        field:
-          element: "hidden"
-          value: "gear"
-      - name: "layout"
-        field:
-          element: "hidden"
-          value: "page"
-      - name: "title"
-        field:
-          element: "text"
-          label: "Title"
-          value: ""
-      - name: "permalink"
-        field:
-          element: "text"
-          label: "Permalink"
-          value: ""
-
-
-
-
-### page details
-# title
-# description
-# keywords
-# graph_image
-# graph_image_type
-# graph_image_width
-# graph_image_height

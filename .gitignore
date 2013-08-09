@@ -2,5 +2,7 @@ _site/*
 .DS_Store
 .sass-cache/*
 *.scssc
-
+node_modules
+__dev/
+__live
 *.map
